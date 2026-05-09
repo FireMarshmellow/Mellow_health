@@ -1,0 +1,5064 @@
+{
+  "workout_database": [
+    {
+      "date": "2025-09-19",
+      "start_time": "08:08 am",
+      "workout_duration": "35m:21s",
+      "exercises": [
+        {
+          "exercise_name": "Cable Rope Face Pulls",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 23.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 23.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 23.0,
+              "reps": 12
+            },
+            {
+              "set_number": 4,
+              "weight_kg": 23.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Preacher Curl",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 75.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 75.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Kettlebell Farmers Carry",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 10.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 10.0,
+              "reps": 10
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 10.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Machine Bent Arm Pec Fly",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 40.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 40.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 50.0,
+              "reps": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-09-22",
+      "start_time": "08:53 am",
+      "workout_duration": "14m:43s",
+      "exercises": [
+        {
+          "exercise_name": "Barbell Stiff Leg Deadlifts",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 20.0,
+              "reps": 15
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 20.0,
+              "reps": 15
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 20.0,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "exercise_name": "Cable High Single Arm Rear Delt Fly",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 18.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 18.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 18.0,
+              "reps": 12
+            },
+            {
+              "set_number": 4,
+              "weight_kg": 18.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Incline Curl",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 5.0,
+              "reps": 15
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 5.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "exercise_name": "Kettlebell Single Arm Farmers March",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 12.0,
+              "reps": 20
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 12.0,
+              "reps": 20
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 12.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "exercise_name": "Machine Pulldown Morning Workout (22 Sept)",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 30.0,
+              "reps": 15
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 30.0,
+              "reps": 15
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 30.0,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "exercise_name": "My Beginner Upper Body Workout Bodyweight Unilateral Dumbbell Row Pull",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 10.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 10.0,
+              "reps": 20
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 10.0,
+              "reps": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-09-23",
+      "start_time": "08:41 am",
+      "workout_duration": "29m:29s",
+      "exercises": [
+        {
+          "exercise_name": "Machine Bent Arm Pec Fly",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 40.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 50.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 60.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Machine Seated Plate Loaded Preacher Curl",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 40.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 40.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 50.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Morning Workout (23 2025 September 23, Press Machine Horizontal Leg Sept)",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 49.9,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 49.9,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 59.9,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Narrow Pulldown",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 35.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 35.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 40.0,
+              "reps": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-10-30",
+      "start_time": "08:21 am",
+      "workout_duration": "27m:22s",
+      "exercises": [
+        {
+          "exercise_name": "3 25kg x 12 Reps Curl Machine Hamstring 2 17.5,kg x 12 Reps",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 22.7,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 27.2,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 31.8,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Cable Low Single Arm Lateral Raise",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 9.0,
+              "reps": 10
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 9.0,
+              "reps": 10
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 9.0,
+              "reps": 10
+            },
+            {
+              "set_number": 4,
+              "weight_kg": 9.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Goblet Squat",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 10.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Lateral Raise",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 5.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 5.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 5.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Seated Overhead Press",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 75.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 12.5,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Machine Seated Calf Raises",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 10.0,
+              "reps": 15
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 20.0,
+              "reps": 15
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 30.0,
+              "reps": 15
+            },
+            {
+              "set_number": 4,
+              "weight_kg": 40.0,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "exercise_name": "My Intermediate Shoulders Workout Barbell Overhead Press Barbell",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 20.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 20.0,
+              "reps": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-10-31",
+      "start_time": "08:36 am",
+      "workout_duration": "4m:30s",
+      "exercises": [
+        {
+          "exercise_name": "Barbell Bench Press",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 30.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 40.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 45.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Barbell Hip Thrust",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 40.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 60.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 65.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Barbell Overhead Press",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 20.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 25.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Row Unilateral",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 15.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 17.5,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 22.5,
+              "reps": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-11-03",
+      "start_time": "07:59 am",
+      "workout_duration": "3m:20s",
+      "exercises": [
+        {
+          "exercise_name": "Barbell Bench Press",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 30.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 40.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 45.0,
+              "reps": 9
+            }
+          ]
+        },
+        {
+          "exercise_name": "Barbell Deadlift",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 30.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 40.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 50.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Barbell Overhead Press",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 20.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 25.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Cable Rope Pushdown",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 23.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 27.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 32.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "November 3,.2025 Hand Plank 12:26",
+          "sets": [
+            {
+              "set_number": 3,
+              "weight_kg": 0.0,
+              "reps": 80
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-11-06",
+      "start_time": "08:33 am",
+      "workout_duration": "1m:2s",
+      "exercises": [
+        {
+          "exercise_name": "2 20kg x 12Reps 3 22.5kg x 12Reps Machine Hamstring Curl 1 17.5,kg x 12 Reps",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 22.7,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 27.2,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 31.8,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "60kg 3 65kg x 12 Reps Barbell Bench Press 2 x 12Reps",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 30.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 40.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 45.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Barbell Hip Thrust 12:27",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 30.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 40.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 50.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Barbell Overhead Press",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 20.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 25.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Barbell Squat",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 40.0,
+              "reps": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-11-10",
+      "start_time": "08:09 am",
+      "workout_duration": "14m:24s",
+      "exercises": [
+        {
+          "exercise_name": "Barbell Overhead Press",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 20.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 30.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Cable Rope Pushdown",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 32.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 36.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 41.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Incline Curl",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 7.5,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 10.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Skullcrusher",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 7.5,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 7.5,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "My Intermediate Arms Barbell Workout Barbell Curl 12:33 elem 94 |",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 20.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 25.0,
+              "reps": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-11-11",
+      "start_time": "08:11 am",
+      "workout_duration": "40m:13s",
+      "exercises": [
+        {
+          "exercise_name": "Cable High Single Arm Rear Delt Fly 12:33 wil 4G &",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 13.6,
+              "reps": 15
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 13.6,
+              "reps": 15
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 13.6,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Overhead Press",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 10.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 12.5,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Seated Rear Delt Fly",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 5.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 5.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 5.0,
+              "reps": 12
+            },
+            {
+              "set_number": 4,
+              "weight_kg": 5.0,
+              "reps": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-11-18",
+      "start_time": "08:29 am",
+      "workout_duration": "53m:1s",
+      "exercises": [
+        {
+          "exercise_name": "Barbell Bench Press",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 40.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 50.0,
+              "reps": 9
+            }
+          ]
+        },
+        {
+          "exercise_name": "Barbell Hip Thrust 12:35",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 40.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 60.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 70.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Barbell Overhead Press",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 0.0,
+              "reps": 6
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 0.0,
+              "reps": 6
+            }
+          ]
+        },
+        {
+          "exercise_name": "Barbell Squat",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 30.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 50.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 60.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Cable Rope Face Pulls",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 27.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 32.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 32.0,
+              "reps": 12
+            },
+            {
+              "set_number": 4,
+              "weight_kg": 32.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Chin Ups",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 0.0,
+              "reps": 3
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 0.0,
+              "reps": 3
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 0.0,
+              "reps": 5
+            }
+          ]
+        },
+        {
+          "exercise_name": "Machine Hamstring Curl",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 27.2,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 27.2,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 31.8,
+              "reps": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-12-01",
+      "start_time": "08:20 am",
+      "workout_duration": "50m:54s",
+      "exercises": [
+        {
+          "exercise_name": "Barbell Close Grip Bench Press",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 20.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 30.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 40.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Barbell Curl",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 18.0,
+              "reps": 15
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 23.0,
+              "reps": 14
+            }
+          ]
+        },
+        {
+          "exercise_name": "Cable Rope Pushdown",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 32.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 36.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 41.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Incline Curl",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 7.5,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 7.5,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Preacher Curl",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 7.5,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 10.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Skullcrusher",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 75.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 75.0,
+              "reps": 14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-12-02",
+      "start_time": "08:16 am",
+      "workout_duration": "4m:50s",
+      "exercises": [
+        {
+          "exercise_name": "Barbell Deadlift",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 30.0,
+              "reps": 12
+            },
+            {
+              "set_number": 1,
+              "weight_kg": 0.0,
+              "reps": 90
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 40.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 0.0,
+              "reps": 90
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 50.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Cable Rope Face Pulls",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 23.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 32.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 32.0,
+              "reps": 30
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Overhead Press",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 75.0,
+              "reps": 14
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 10.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Seated Overhead Press",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 7.5,
+              "reps": 14
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 10.0,
+              "reps": 14
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Seated Rear Delt Fly",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 2.5,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 5.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 5.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "exercise_name": "Hand Plank",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 0.0,
+              "reps": 90
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 0.0,
+              "reps": 90
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 0.0,
+              "reps": 110
+            }
+          ]
+        },
+        {
+          "exercise_name": "My Intermediate Shoulders Barbell Workout Barbell Overhead Press 12:39 th 5G GY",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 20.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 25.0,
+              "reps": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-12-09",
+      "start_time": "08:27 am",
+      "workout_duration": "52m:18s",
+      "exercises": [
+        {
+          "exercise_name": "Barbell Bench Press",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 40.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 50.0,
+              "reps": 9
+            }
+          ]
+        },
+        {
+          "exercise_name": "Barbell Overhead Press",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 20.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 30.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Barbell Squat",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 30.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 40.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 50.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Cable Rope Face Pulls",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 23.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 27.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 32.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "exercise_name": "Chin Ups",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 0.0,
+              "reps": 5
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 0.0,
+              "reps": 5
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 0.0,
+              "reps": 5
+            }
+          ]
+        },
+        {
+          "exercise_name": "Machine Hamstring Curl 12:40 ol 5G GY",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 27.2,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 31.8,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 40.8,
+              "reps": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-12-15",
+      "start_time": "08:29 am",
+      "workout_duration": "59m:4s",
+      "exercises": [
+        {
+          "exercise_name": "Barbell Close Grip Bench Press",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 30.0,
+              "reps": 20
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 40.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 45.0,
+              "reps": 7
+            }
+          ]
+        },
+        {
+          "exercise_name": "Barbell Curl",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 18.0,
+              "reps": 20
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 23.0,
+              "reps": 14
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 23.0,
+              "reps": 10
+            }
+          ]
+        },
+        {
+          "exercise_name": "Cable Rope Pushdown",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 32.0,
+              "reps": 20
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 36.0,
+              "reps": 20
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 36.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "exercise_name": "Crunches",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 0.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Incline Curl",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 5.0,
+              "reps": 14
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 75.0,
+              "reps": 14
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Preacher Curl",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 75.0,
+              "reps": 14
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 10.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Skullcrusher",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 75.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 75.0,
+              "reps": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-12-16",
+      "start_time": "08:42 am",
+      "workout_duration": "9m:53s",
+      "exercises": [
+        {
+          "exercise_name": "Barbell Overhead Press",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 20.0,
+              "reps": 14
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 30.0,
+              "reps": 14
+            }
+          ]
+        },
+        {
+          "exercise_name": "Cable High Single Arm Rear Delt Fly",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 9.0,
+              "reps": 20
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 9.0,
+              "reps": 20
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 13.6,
+              "reps": 14
+            },
+            {
+              "set_number": 4,
+              "weight_kg": 13.6,
+              "reps": 14
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Seated Overhead Press",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 75.0,
+              "reps": 14
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 10.0,
+              "reps": 14
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 12.5,
+              "reps": 14
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Seated Rear Delt Fly",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 5.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 5.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 75.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Machine Pulldown",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 30.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 40.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 45.0,
+              "reps": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-12-17",
+      "start_time": "08:01 am",
+      "workout_duration": "31m:23s",
+      "exercises": [
+        {
+          "exercise_name": "Barbell Squat",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 30.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 40.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 50.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Barbell Stiff Leg Deadlifts",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 40.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 60.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 70.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Machine Seated Calf Raises",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 20.0,
+              "reps": 15
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 40.0,
+              "reps": 15
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 50.0,
+              "reps": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-12-18",
+      "start_time": "08:13 am",
+      "workout_duration": "4m:30s",
+      "exercises": [
+        {
+          "exercise_name": "Barbell Deadlift",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 30.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 40.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 50.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Hand Plank",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 0.0,
+              "reps": 90
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 0.0,
+              "reps": 90
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 0.0,
+              "reps": 90
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2025-12-19",
+      "start_time": "08:15 am",
+      "workout_duration": "34m:18s",
+      "exercises": [
+        {
+          "exercise_name": "Barbell Bench Press",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 40.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 50.0,
+              "reps": 11
+            }
+          ]
+        },
+        {
+          "exercise_name": "Machine Hamstring Curl",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 27.2,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 31.8,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 40.8,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Machine Hip Abduction",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 31.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 38.5,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 45.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Machine Hip Adduction",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 31.5,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 45.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 52.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Machine Leg Extension",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 13.6,
+              "reps": 14
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 20.0,
+              "reps": 14
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 27.0,
+              "reps": 14
+            }
+          ]
+        },
+        {
+          "exercise_name": "Machine Pulldown 12:43 em 90D",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 30.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 35.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 45.0,
+              "reps": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-01-12",
+      "start_time": "08:06 am",
+      "workout_duration": "32m:50s",
+      "exercises": [
+        {
+          "exercise_name": "Cable Rope Face Pulls",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 23.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 23.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 27.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Overhead Press",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 7.5,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 10.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Smith Machine Romanian Deadlift",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 10.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 20.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Smith Machine Squat",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 10.0,
+              "reps": 10
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 20.0,
+              "reps": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-01-19",
+      "start_time": "08:15 am",
+      "workout_duration": "34m:18s",
+      "exercises": [
+        {
+          "exercise_name": "Barbell Hip Thrust",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 30.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 40.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 50.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Machine Seated Calf Raises",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 10.0,
+              "reps": 15
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 20.0,
+              "reps": 15
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 30.0,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "exercise_name": "Smith Machine Squat",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 10.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 20.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 30.0,
+              "reps": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-01-21",
+      "start_time": "08:10 am",
+      "workout_duration": "36m:25s",
+      "exercises": [
+        {
+          "exercise_name": "Barbell Close Grip Bench Press",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 25.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 30.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "exercise_name": "Barbell Curl",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 8.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 13.0,
+              "reps": 20
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 18.0,
+              "reps": 20
+            }
+          ]
+        },
+        {
+          "exercise_name": "Cable Rope Pushdown",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 23.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 27.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 32.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Incline Curl",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 5.0,
+              "reps": 14
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 75.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Preacher Curl",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 5.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 75.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Skullcrusher",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 5.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 75.0,
+              "reps": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-01-26",
+      "start_time": "08:14 am",
+      "workout_duration": "43m:20s",
+      "exercises": [
+        {
+          "exercise_name": "Barbell Overhead Press",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 20.0,
+              "reps": 20
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 30.0,
+              "reps": 9
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 30.0,
+              "reps": 6
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Overhead Press",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 75.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 10.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Seated Overhead Press",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 5.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 75.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 10.0,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "exercise_name": "Sets 1 23kg x 15 Reps 2 27kg x 15 Reps 3 32kg x 15 Reps Fly Dumbbell Seated Rear Delt (3)",
+          "sets": [
+            {
+              "set_number": 1,
+              "weight_kg": 5.0,
+              "reps": 12
+            },
+            {
+              "set_number": 2,
+              "weight_kg": 5.0,
+              "reps": 12
+            },
+            {
+              "set_number": 3,
+              "weight_kg": 5.0,
+              "reps": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-03-30",
+      "start_time": "19:05",
+      "source": "text_import",
+      "exercises": [
+        {
+          "exercise_name": "No pleats small then 2.5kg",
+          "sets": []
+        },
+        {
+          "exercise_name": "Bench Press",
+          "sets": [
+            {
+              "reps": 8,
+              "weight_kg": 30.0,
+              "notes": "8x30kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 35.0,
+              "notes": "8x35kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 35.0,
+              "notes": "8x35kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 35.0,
+              "notes": "8x35kg"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Overhead Press",
+          "sets": [
+            {
+              "reps": 8,
+              "weight_kg": 20.0,
+              "notes": "8x20kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 25.0,
+              "notes": "8x25kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 25.0,
+              "notes": "8x25kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 25.0,
+              "notes": "8x25kg last 3 hard"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Incline DB Press",
+          "sets": [
+            {
+              "reps": 8,
+              "weight_kg": 15.0,
+              "notes": "8x15kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 15.0,
+              "notes": "10x15kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 15.0,
+              "notes": "10x15kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 15.0,
+              "notes": "10x15kg easy"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Lateral Raises",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 5.0,
+              "notes": "15x5kg in each hand"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 5.0,
+              "notes": "15x5kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 5.0,
+              "notes": "15x5kg form went to shit, can get all the way up"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 5.0,
+              "notes": "15x5kg"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Triceps Pushdown",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 35.0,
+              "notes": "15x35kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 35.0,
+              "notes": "15x35kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 35.0,
+              "notes": "15x35kg starting to Bern haft way through"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 35.0,
+              "notes": "15x35kg bad form through most of it"
+            }
+          ]
+        },
+        {
+          "exercise_name": "1k at 13kh on treadmill",
+          "sets": []
+        }
+      ]
+    },
+    {
+      "date": "2026-03-31",
+      "start_time": "17:51",
+      "source": "text_import",
+      "exercises": [
+        {
+          "exercise_name": "Lat Pulldown",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 35.0,
+              "notes": "12x35kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 35.0,
+              "notes": "12x35kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 40.0,
+              "notes": "12x40kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 40.0,
+              "notes": "12x40kg good been"
+            }
+          ]
+        },
+        {
+          "exercise_name": "T-bar Row",
+          "sets": [
+            {
+              "reps": 10,
+              "weight_kg": 20.0,
+              "notes": "10x20kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 20.0,
+              "notes": "10x20kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 20.0,
+              "notes": "10x20 straggling with 20 not going higher yet"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 20.0,
+              "notes": "10x20. Bad form p"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Face Pulls",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 27.0,
+              "notes": "15x27kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 27.0,
+              "notes": "15x27kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 32.0,
+              "notes": "15x32kg"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Rear Delt Raises",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 5.0,
+              "notes": "12x5kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 5.0,
+              "notes": "12x5kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 5.0,
+              "notes": "12x5kg form let off at the end but felt beater then yesterday"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Hammer Curls",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 10.0,
+              "notes": "15x10kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 12.5,
+              "notes": "12x12.5kg left arm straggling at the end"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 12.5,
+              "notes": "12x12.5kg left felt more like I was throwing it up not lifting"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-04-01",
+      "start_time": "19:05",
+      "source": "text_import",
+      "exercises": [
+        {
+          "exercise_name": "Leg Press",
+          "sets": [
+            {
+              "reps": 13,
+              "weight_kg": 60.0,
+              "notes": "13x60kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 68.0,
+              "notes": "12x68kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 68.0,
+              "notes": "12x68kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 77.0,
+              "notes": "10x77kg this point felt good burn"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Romanian Deadlift",
+          "sets": [
+            {
+              "reps": 8,
+              "weight_kg": 50.0,
+              "notes": "8x50kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 55.0,
+              "notes": "8x55kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 60.0,
+              "notes": "8x60kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 60.0,
+              "notes": "8x60kg felt good"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Walking Lunges",
+          "sets": [
+            {
+              "reps": 20,
+              "weight_kg": 10.0,
+              "notes": "20x10kg"
+            },
+            {
+              "reps": 20,
+              "weight_kg": 12.5,
+              "notes": "20x12.5kg just to confirm it\u2019s 12.5 in each hand"
+            },
+            {
+              "reps": 20,
+              "weight_kg": 12.5,
+              "notes": "20x12.5kg some pain around the knee \u201cMedial"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Retinaculum\u201d from looking online looks like this.",
+          "sets": []
+        },
+        {
+          "exercise_name": "Leg Curl",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 32.0,
+              "notes": "12x32kg no 35 on the machine"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 39.0,
+              "notes": "12x39kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 39.0,
+              "notes": "12x39kg fine"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Seated Calf Raise",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 40.0,
+              "notes": "15x40kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 45.0,
+              "notes": "15x45kg started holding on top for 2s"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 45.0,
+              "notes": "15x45kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 45.0,
+              "notes": "15x45kg good burn \ud83d\udd25"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-04-02",
+      "start_time": "18:08",
+      "source": "text_import",
+      "exercises": [
+        {
+          "exercise_name": "Overhead Press",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 20.0,
+              "notes": "12x20kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 25.0,
+              "notes": "8x25kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 25.0,
+              "notes": "8x25kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 25.0,
+              "notes": "8x25kg felt good, could do a few more but only a couple."
+            }
+          ]
+        },
+        {
+          "exercise_name": "Incline DB Press",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 15.0,
+              "notes": "12x15kg don\u2019t feel like I can go up yet"
+            },
+            {
+              "reps": 7,
+              "weight_kg": 15.0,
+              "notes": "7x15kg"
+            },
+            {
+              "reps": 9,
+              "weight_kg": 15.0,
+              "notes": "9x15kg"
+            },
+            {
+              "reps": 7,
+              "weight_kg": 15.0,
+              "notes": "7x15kg"
+            }
+          ]
+        },
+        {
+          "exercise_name": "DB Chest Press (flat)",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 12.5,
+              "notes": "12x12.5kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 15.0,
+              "notes": "12x15kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 15.0,
+              "notes": "12x15kg"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Lateral Raises",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 5.0,
+              "notes": "15x5kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 5.0,
+              "notes": "15x5kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 5.0,
+              "notes": "15x5kg for going to shit midway"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 5.0,
+              "notes": "15x5kg same"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Triceps Pushdown",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 27.0,
+              "notes": "15x27kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 32.0,
+              "notes": "15x32kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 32.0,
+              "notes": "15x32kg good burn"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-04-03",
+      "start_time": "18:05",
+      "source": "text_import",
+      "exercises": [
+        {
+          "exercise_name": "Lat Pulldown",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 35.0,
+              "notes": "12x35kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 40.0,
+              "notes": "12x40kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 40.0,
+              "notes": "12x40kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 45.0,
+              "notes": "12x45kg next step is 45kg, good burn"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Chest-Supported Row",
+          "sets": []
+        },
+        {
+          "exercise_name": "So t-bar??",
+          "sets": [
+            {
+              "reps": 10,
+              "weight_kg": 15.0,
+              "notes": "10x15kg 20 felt like a lot."
+            },
+            {
+              "reps": 10,
+              "weight_kg": 15.0,
+              "notes": "10x15kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 20.0,
+              "notes": "10x20kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 20.0,
+              "notes": "10x20kg form started to go on last 4 but felt good"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Face Pulls",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 27.0,
+              "notes": "15x27kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 32.0,
+              "notes": "15x32kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 32.0,
+              "notes": "15x32kg"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Hammer Curls",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 10.0,
+              "notes": "15x10kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 10.0,
+              "notes": "15x10kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 10.0,
+              "notes": "15x10kg felt fine left didn\u2019t give out early."
+            }
+          ]
+        },
+        {
+          "exercise_name": "Bicep Curls",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 7.5,
+              "notes": "15x7.5kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 7.5,
+              "notes": "12x7.5kg form want to shit at 9"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 7.5,
+              "notes": "12x7.5kg last 3 bad but felt good"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-04-06",
+      "start_time": "18:55",
+      "source": "text_import",
+      "exercises": [
+        {
+          "exercise_name": "Bench Press",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 35.0,
+              "notes": "12x35kg I go t curryd away"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 40.0,
+              "notes": "8x40kg can\u2019t do less, don\u2019t have weights small enough."
+            },
+            {
+              "reps": 8,
+              "weight_kg": 40.0,
+              "notes": "8x40kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 40.0,
+              "notes": "10x40kg felt good"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Overhead Press",
+          "sets": [
+            {
+              "reps": 8,
+              "weight_kg": 20.0,
+              "notes": "8x20kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 25.0,
+              "notes": "8x25kg"
+            },
+            {
+              "reps": 9,
+              "weight_kg": 25.0,
+              "notes": "9x25kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 25.0,
+              "notes": "8x25kg felt easy"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Incline DB Press",
+          "sets": [
+            {
+              "reps": 10,
+              "weight_kg": 15.0,
+              "notes": "10x15kg I don\u2019t feel too confident about going up from 15"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 17.5,
+              "notes": "10x17.5kg did it but almost failed on the last one"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 17.5,
+              "notes": "8x17.5kg failed \ud83d\ude1e"
+            },
+            {
+              "reps": 7,
+              "weight_kg": 17.5,
+              "notes": "7x17.5kg failed \ud83d\ude23 with 90s rest"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Lateral Raises",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 5.0,
+              "notes": "15x5kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 5.0,
+              "notes": "15x5kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 5.0,
+              "notes": "15x5kg form wand to shit at the end"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 5.0,
+              "notes": "15x5kg same"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Triceps Pushdown",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 27.0,
+              "notes": "15x27kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 32.0,
+              "notes": "15x32kg"
+            },
+            {
+              "reps": 16,
+              "weight_kg": 34.0,
+              "notes": "16x34kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 34.0,
+              "notes": "15x34kg good burn"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Did 15 sit-up for fun",
+          "sets": []
+        }
+      ]
+    },
+    {
+      "date": "2026-04-07",
+      "start_time": "18:29",
+      "source": "text_import",
+      "exercises": [
+        {
+          "exercise_name": "Lat Pulldown",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 40.0,
+              "notes": "12x40kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 40.0,
+              "notes": "12x40kg don\u2019t have 2.5kg next step it 45kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 45.0,
+              "notes": "12x45kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 45.0,
+              "notes": "12x45kg form stared to feel off at the end"
+            }
+          ]
+        },
+        {
+          "exercise_name": "T-bar Row",
+          "sets": [
+            {
+              "reps": 10,
+              "weight_kg": 15.0,
+              "notes": "10x15kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 20.0,
+              "notes": "10x20kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 20.0,
+              "notes": "10x20kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 22.5,
+              "notes": "10x22.5kg form a bit wobbly hafe way throw"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Face Pulls",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 27.0,
+              "notes": "15x27kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 32.0,
+              "notes": "15x32kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 32.0,
+              "notes": "15x32kg easy"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Rear Delt Raises",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 5.0,
+              "notes": "12x5kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 5.0,
+              "notes": "12x5kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 5.0,
+              "notes": "12x5kg sooooo much easier, but still wobbly at the end"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Hammer Curls",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 10.0,
+              "notes": "15x10kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 10.0,
+              "notes": "15x10kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 12.5,
+              "notes": "15x12.5kg hard at the end but did it"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Bicep Curls",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 18.0,
+              "notes": "15x18kg i switched to a sort bar for DB"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 18.0,
+              "notes": "12x18kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 18.0,
+              "notes": "12x18kg sloppy at the end"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-04-08",
+      "start_time": "18:35",
+      "source": "text_import",
+      "exercises": [
+        {
+          "exercise_name": "Leg Press",
+          "sets": [
+            {
+              "reps": 10,
+              "weight_kg": 68.0,
+              "notes": "10x68kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 68.0,
+              "notes": "10x68kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 77.0,
+              "notes": "10x77kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 77.0,
+              "notes": "10x77kg fine"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Romanian Deadlift",
+          "sets": [
+            {
+              "reps": 8,
+              "weight_kg": 55.0,
+              "notes": "8x55kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 60.0,
+              "notes": "8x60kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 65.0,
+              "notes": "8x65kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 65.0,
+              "notes": "8x65kg weight was fine but my grip was loose"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Walking Lunges",
+          "sets": [
+            {
+              "reps": 20,
+              "weight_kg": 10.0,
+              "notes": "20x10kg"
+            },
+            {
+              "reps": 20,
+              "weight_kg": 10.0,
+              "notes": "20x10kg felt easier"
+            },
+            {
+              "reps": 20,
+              "weight_kg": 12.5,
+              "notes": "20x12.5kg nice burn"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Leg Curl",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 32.0,
+              "notes": "12x32kg no 35"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 39.0,
+              "notes": "12x39kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 39.0,
+              "notes": "12x39kg no problem, maybe time to go up"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Seated Calf Raise",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 45.0,
+              "notes": "15x45kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 50.0,
+              "notes": "15x50kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 55.0,
+              "notes": "15x55kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 55.0,
+              "notes": "15x55kg"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Core Finisher",
+          "sets": []
+        }
+      ]
+    },
+    {
+      "date": "2026-04-09",
+      "start_time": "18:56",
+      "source": "text_import",
+      "exercises": [
+        {
+          "exercise_name": "Bench Press",
+          "sets": [
+            {
+              "reps": 8,
+              "weight_kg": 40.0,
+              "notes": "8x40kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 40.0,
+              "notes": "8x40kg"
+            },
+            {
+              "reps": 9,
+              "weight_kg": 40.0,
+              "notes": "9x40kg"
+            },
+            {
+              "reps": 14,
+              "weight_kg": 40.0,
+              "notes": "14x40kg"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Overhead Press",
+          "sets": [
+            {
+              "reps": 8,
+              "weight_kg": 20.0,
+              "notes": "8x20kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 25.0,
+              "notes": "8x25kg don\u2019t have 7.5"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 25.0,
+              "notes": "8x25kg"
+            },
+            {
+              "reps": 9,
+              "weight_kg": 25.0,
+              "notes": "9x25kg 9 was where I failed"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Incline DB Press",
+          "sets": [
+            {
+              "reps": 10,
+              "weight_kg": 15.0,
+              "notes": "10x15kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 15.0,
+              "notes": "10x15kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 15.0,
+              "notes": "10x15kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 15.0,
+              "notes": "10x15kg almost failed on the last one"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Lateral Raises",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 5.0,
+              "notes": "15x5kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 5.0,
+              "notes": "15x5kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 5.0,
+              "notes": "15x5kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 5.0,
+              "notes": "15x5kg"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Triceps Pushdown",
+          "sets": []
+        },
+        {
+          "exercise_name": "Did have time to today, someone was on the machine",
+          "sets": []
+        },
+        {
+          "exercise_name": "Bit of pain in the right shoulder",
+          "sets": []
+        }
+      ]
+    },
+    {
+      "date": "2026-04-10",
+      "start_time": "18:21",
+      "source": "text_import",
+      "exercises": [
+        {
+          "exercise_name": "Lat Pulldown",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 40.0,
+              "notes": "12x40kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 45.0,
+              "notes": "12x45kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 45.0,
+              "notes": "12x45kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 45.0,
+              "notes": "12x45kg next step it 50kg, lost form at the end"
+            }
+          ]
+        },
+        {
+          "exercise_name": "T-bar Row",
+          "sets": [
+            {
+              "reps": 10,
+              "weight_kg": 15.0,
+              "notes": "10x15kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 20.0,
+              "notes": "10x20kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 22.5,
+              "notes": "10x22.5kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 22.5,
+              "notes": "10x22.5kg"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Face Pulls",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 27.0,
+              "notes": "15x27kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 36.0,
+              "notes": "15x36kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 36.0,
+              "notes": "15x36kg"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Rear Delt Raises",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 5.0,
+              "notes": "12x5kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 5.0,
+              "notes": "12x5kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 5.0,
+              "notes": "12x5kg did the 2s hold felt good didn\u2019t over extend"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Hammer Curls",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 10.0,
+              "notes": "15x10kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 15.0,
+              "notes": "15x15kg hard"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 12.5,
+              "notes": "15x12.5kg"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Bicep Curls",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 18.0,
+              "notes": "15x18kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 18.0,
+              "notes": "12x18kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 18.0,
+              "notes": "12x18kg didn\u2019t feel like going up"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-04-13",
+      "start_time": "19:52",
+      "source": "text_import",
+      "exercises": [
+        {
+          "exercise_name": "Bench Press",
+          "sets": [
+            {
+              "reps": 10,
+              "weight_kg": 40.0,
+              "notes": "10x40kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 45.0,
+              "notes": "10x45kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 45.0,
+              "notes": "8x45kg"
+            },
+            {
+              "reps": 6,
+              "weight_kg": 45.0,
+              "notes": "6x45kg"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Overhead Press",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 13.0,
+              "notes": "15x13kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 18.0,
+              "notes": "15x18kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 23.0,
+              "notes": "12x23kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 23.0,
+              "notes": "10x23kg I have to work around available equipment"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Incline DB Press",
+          "sets": [
+            {
+              "reps": 10,
+              "weight_kg": 12.5,
+              "notes": "10x12.5kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 12.5,
+              "notes": "10x12.5kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 15.0,
+              "notes": "10x15kg"
+            },
+            {
+              "reps": 9,
+              "weight_kg": 15.0,
+              "notes": "9x15kg to failure"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Pec Fly Machine",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 30.0,
+              "notes": "12x30kg too easy"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 40.0,
+              "notes": "12x40kg still easy"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 50.0,
+              "notes": "12x50kg easy did all with minimal rest"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Lateral Raises",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 5.0,
+              "notes": "15x5kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 5.0,
+              "notes": "15x5kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 5.0,
+              "notes": "15x5kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 5.0,
+              "notes": "15x5kg form went at the end"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Triceps Pushdown",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 27.0,
+              "notes": "15x27kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 32.0,
+              "notes": "15x32kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 34.0,
+              "notes": "15x34kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 34.0,
+              "notes": "15x34kg good"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Triceps Overhead Extension (cable)",
+          "sets": [
+            {
+              "reps": 8,
+              "weight_kg": 18.0,
+              "notes": "8x18kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 14.0,
+              "notes": "12x14kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 14.0,
+              "notes": "12x14kg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-04-14",
+      "start_time": "19:14",
+      "source": "text_import",
+      "exercises": [
+        {
+          "exercise_name": "Lat Pulldown",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 40.0,
+              "notes": "12x40kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 45.0,
+              "notes": "12x45kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 45.0,
+              "notes": "12x45kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 45.0,
+              "notes": "12x45kg bit wobbly at the end"
+            }
+          ]
+        },
+        {
+          "exercise_name": "T-bar Row",
+          "sets": [
+            {
+              "reps": 10,
+              "weight_kg": 15.0,
+              "notes": "10x15kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 20.0,
+              "notes": "10x20kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 25.0,
+              "notes": "10x25kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 25.0,
+              "notes": "10x25kg lifting my chest on last set"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Face Pulls",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 27.0,
+              "notes": "15x27kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 36.0,
+              "notes": "15x36kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 36.0,
+              "notes": "15x36kg"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Rear Delt Raises",
+          "sets": [
+            {
+              "reps": 16,
+              "weight_kg": 5.0,
+              "notes": "16x5kg"
+            },
+            {
+              "reps": 17,
+              "weight_kg": 5.0,
+              "notes": "17x5kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 5.0,
+              "notes": "15x5kg might be time to move up"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Hammer Curls",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 12.5,
+              "notes": "12x12.5kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 12.5,
+              "notes": "12x12.5kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 12.5,
+              "notes": "12x12.5kg hard but ok"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Bicep Curls",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 18.0,
+              "notes": "12x18kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 18.0,
+              "notes": "12x18kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 20.0,
+              "notes": "12x20kg fine"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Seated Row Machine",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 30.0,
+              "notes": "12x30kg too light"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 60.0,
+              "notes": "12x60kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 75.0,
+              "notes": "12x75kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 75.0,
+              "notes": "12x75kg good burn"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-04-15",
+      "start_time": "18:40",
+      "source": "text_import",
+      "exercises": [
+        {
+          "exercise_name": "Wednesday \u2014 Legs",
+          "sets": []
+        },
+        {
+          "exercise_name": "Leg Press",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 68.0,
+              "notes": "12x68kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 77.0,
+              "notes": "10x77kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 86.2,
+              "notes": "10x86.2kg no 80kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 86.2,
+              "notes": "10x86.2kg good"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Romanian Deadlift",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 55.0,
+              "notes": "12x55kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 60.0,
+              "notes": "10x60kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 65.0,
+              "notes": "10x65kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 65.0,
+              "notes": "12x65kg feel like I can do more"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Walking Lunges",
+          "sets": [
+            {
+              "reps": 20,
+              "weight_kg": 10.0,
+              "notes": "20x10kg"
+            },
+            {
+              "reps": 20,
+              "weight_kg": 12.5,
+              "notes": "20x12.5kg"
+            },
+            {
+              "reps": 20,
+              "weight_kg": 12.5,
+              "notes": "20x12.5kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Leg Curl",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 32.0,
+              "notes": "12x32kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 39.0,
+              "notes": "12x39kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 45.0,
+              "notes": "12x45kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 45.0,
+              "notes": "12x45kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Seated Calf Raise",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 45.0,
+              "notes": "15x45kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 50.0,
+              "notes": "15x50kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 55.0,
+              "notes": "15x55kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 60.0,
+              "notes": "15x60kg"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Core Finisher",
+          "sets": []
+        },
+        {
+          "exercise_name": "I run out of time today",
+          "sets": []
+        },
+        {
+          "exercise_name": "Not just leg days",
+          "sets": []
+        },
+        {
+          "exercise_name": "I want to shape my ads and pull ups.",
+          "sets": []
+        }
+      ]
+    },
+    {
+      "date": "2026-04-16",
+      "start_time": "18:30",
+      "source": "text_import",
+      "exercises": [
+        {
+          "exercise_name": "Thursday \u2014 Push",
+          "sets": []
+        },
+        {
+          "exercise_name": "Overhead Press",
+          "sets": [
+            {
+              "reps": 10,
+              "weight_kg": 20.0,
+              "notes": "10x20kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 25.0,
+              "notes": "10x25kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 25.0,
+              "notes": "10x25kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 25.0,
+              "notes": "10x25kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Dumbbell Shoulder Press",
+          "sets": [
+            {
+              "reps": 10,
+              "weight_kg": 12.5,
+              "notes": "10x12.5kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 12.5,
+              "notes": "10x12.5kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 12.5,
+              "notes": "10x12.5kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Incline DB Press",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 15.0,
+              "notes": "15x15kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 17.5,
+              "notes": "10x17.5kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 17.5,
+              "notes": "10x17.5kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 17.5,
+              "notes": "10x17.5kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Pec Fly Machine",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 50.0,
+              "notes": "12x50kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 60.0,
+              "notes": "12x60kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 60.0,
+              "notes": "12x60kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Cable Lateral Raises",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 14.0,
+              "notes": "15x14kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 14.0,
+              "notes": "15x14kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 14.0,
+              "notes": "15x14kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 14.0,
+              "notes": "15x14kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Triceps Overhead Extension",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 14.0,
+              "notes": "12x14kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 18.0,
+              "notes": "12x18kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 23.0,
+              "notes": "12x23kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Ab Finisher",
+          "sets": []
+        }
+      ]
+    },
+    {
+      "date": "2026-04-17",
+      "start_time": "18:47",
+      "source": "text_import",
+      "exercises": [
+        {
+          "exercise_name": "Pull Ups",
+          "sets": [
+            {
+              "reps": 3,
+              "weight_kg": 5.0,
+              "notes": "3x5 assisted with midden band"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Lat Pulldown",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 45.0,
+              "notes": "12x45kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 40.0,
+              "notes": "12x40kg went down to work on form"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 40.0,
+              "notes": "12x40kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Seated Row Machine",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 60.0,
+              "notes": "12x60kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 75.0,
+              "notes": "12x75kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 90.0,
+              "notes": "12x90kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 90.0,
+              "notes": "12x90kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Face Pulls",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 27.0,
+              "notes": "15x27kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 36.0,
+              "notes": "15x36kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 36.0,
+              "notes": "15x36kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Rear Delt Raises",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 7.5,
+              "notes": "12x7.5kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 7.5,
+              "notes": "8x7.5kg faild"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 7.5,
+              "notes": "12x7.5kg failed on last one"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Hammer Curls",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 12.5,
+              "notes": "12x12.5kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 12.5,
+              "notes": "8x12.5kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 12.5,
+              "notes": "12x12.5kg hard Dane"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Bicep Curls",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 20.0,
+              "notes": "12x20kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 20.0,
+              "notes": "12x20kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 20.0,
+              "notes": "12x20kg done"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-05-04",
+      "start_time": "17:50",
+      "source": "text_import",
+      "exercises": [
+        {
+          "exercise_name": "Wednesday \u2014 Legs",
+          "sets": []
+        },
+        {
+          "exercise_name": "Leg Press",
+          "sets": [
+            {
+              "reps": 10,
+              "weight_kg": 77.0,
+              "notes": "10x77kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 86.0,
+              "notes": "10x86kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 86.0,
+              "notes": "10x86kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 93.0,
+              "notes": "10x93kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Romanian Deadlift",
+          "sets": [
+            {
+              "reps": 8,
+              "weight_kg": 60.0,
+              "notes": "8x60kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 65.0,
+              "notes": "8x65kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 70.0,
+              "notes": "8x70kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 70.0,
+              "notes": "8x70kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Leg Curl",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 39.0,
+              "notes": "12x39kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 45.0,
+              "notes": "12x45kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 45.0,
+              "notes": "12x45kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Cadal cranches 3x15",
+          "sets": []
+        },
+        {
+          "exercise_name": "Thursday \u2014 Push",
+          "sets": []
+        },
+        {
+          "exercise_name": "Bench Press",
+          "sets": [
+            {
+              "reps": 8,
+              "weight_kg": 40.0,
+              "notes": "8x40kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 45.0,
+              "notes": "8x45kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 45.0,
+              "notes": "8x45kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 50.0,
+              "notes": "8x50kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Overhead Press",
+          "sets": [
+            {
+              "reps": 10,
+              "weight_kg": 25.0,
+              "notes": "10x25kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 25.0,
+              "notes": "10x25kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 25.0,
+              "notes": "10x25kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "DB Shoulder Press",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 12.5,
+              "notes": "12x12.5kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 12.5,
+              "notes": "12x12.5kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 12.5,
+              "notes": "12x12.5kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Pec Fly Machine",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 60.0,
+              "notes": "15x60kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 60.0,
+              "notes": "12x60kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 60.0,
+              "notes": "12x60kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Lateral Raises",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 7.5,
+              "notes": "12x7.5kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 7.5,
+              "notes": "12x7.5kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 7.5,
+              "notes": "12x7.5kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Triceps Overhead Extension",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 14.0,
+              "notes": "15x14kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 23.0,
+              "notes": "15x23kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 23.0,
+              "notes": "15x23kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Friday \u2014 Pull",
+          "sets": []
+        },
+        {
+          "exercise_name": "Pull Ups",
+          "sets": [
+            {
+              "reps": 3,
+              "weight_kg": 5.0,
+              "notes": "3x5 no band done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Lat Pulldown",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 40.0,
+              "notes": "12x40kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 45.0,
+              "notes": "12x45kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 45.0,
+              "notes": "12x45kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Seated Row Machine",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 60.0,
+              "notes": "12x60kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 75.0,
+              "notes": "12x75kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 90.0,
+              "notes": "12x90kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 90.0,
+              "notes": "12x90kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Face Pulls",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 36.0,
+              "notes": "15x36kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 36.0,
+              "notes": "15x36kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 36.0,
+              "notes": "15x36kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Rear Delt Raises",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 7.5,
+              "notes": "12x7.5kg slow tempo"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 7.5,
+              "notes": "12x7.5kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 57.0,
+              "notes": "12x57.kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Hammer Curls",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 10.0,
+              "notes": "12x10kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 10.0,
+              "notes": "12x10kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 12.5,
+              "notes": "12x12.5kg"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Ab Finisher",
+          "sets": []
+        }
+      ]
+    },
+    {
+      "date": "2026-05-04",
+      "start_time": "18:53",
+      "source": "text_import",
+      "exercises": [
+        {
+          "exercise_name": "Had to cut it short today Monday \u2014 Push",
+          "sets": []
+        },
+        {
+          "exercise_name": "Bench Press",
+          "sets": [
+            {
+              "reps": 8,
+              "weight_kg": 45.0,
+              "notes": "8x45kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 45.0,
+              "notes": "8x45kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 50.0,
+              "notes": "8x50kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 50.0,
+              "notes": "8x50kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Overhead Press",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 25.0,
+              "notes": "12x25kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 25.0,
+              "notes": "8x25kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 25.0,
+              "notes": "8x25kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 25.0,
+              "notes": "8x25kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Pec Fly Machine",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 60.0,
+              "notes": "12x60kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 70.0,
+              "notes": "12x70kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 70.0,
+              "notes": "12x70kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Lateral Raises",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 7.5,
+              "notes": "15x7.5kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 7.5,
+              "notes": "15x7.5kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 7.5,
+              "notes": "15x7.5kg"
+            },
+            {
+              "reps": 9,
+              "weight_kg": 7.5,
+              "notes": "9x7.5kg didn\u2019t give myself enough recovery time"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Ab Finisher",
+          "sets": []
+        }
+      ]
+    },
+    {
+      "date": "2026-05-06",
+      "start_time": "18:27",
+      "source": "text_import",
+      "exercises": [
+        {
+          "exercise_name": "I had to skip wensday for work",
+          "sets": []
+        },
+        {
+          "exercise_name": "Tuesday \u2014 Pull",
+          "sets": []
+        },
+        {
+          "exercise_name": "Pull Ups",
+          "sets": [
+            {
+              "reps": 4,
+              "weight_kg": 5.0,
+              "notes": "4x5 medium only did 2 on last set"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Lat Pulldown",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 45.0,
+              "notes": "12x45kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 45.0,
+              "notes": "12x45kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 45.0,
+              "notes": "12x45kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 45.0,
+              "notes": "12x45kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Seated Row Machine",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 75.0,
+              "notes": "12x75kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 90.0,
+              "notes": "12x90kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 90.0,
+              "notes": "12x90kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 105.0,
+              "notes": "12x105kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Face Pulls",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 36.0,
+              "notes": "15x36kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 41.0,
+              "notes": "15x41kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 41.0,
+              "notes": "15x41kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Rear Delt Raises",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 7.5,
+              "notes": "12x7.5kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 7.5,
+              "notes": "12x7.5kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 7.5,
+              "notes": "12x7.5kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Hammer Curls",
+          "sets": [
+            {
+              "reps": 10,
+              "weight_kg": 12.5,
+              "notes": "10x12.5kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 12.5,
+              "notes": "10x12.5kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 12.5,
+              "notes": "10x12.5kg done"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-05-07",
+      "start_time": "18:30",
+      "source": "text_import",
+      "exercises": [
+        {
+          "exercise_name": "Thursday \u2014 Push",
+          "sets": []
+        },
+        {
+          "exercise_name": "Bench Press",
+          "sets": [
+            {
+              "reps": 8,
+              "weight_kg": 45.0,
+              "notes": "8x45kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 50.0,
+              "notes": "8x50kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 50.0,
+              "notes": "8x50kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Overhead Press",
+          "sets": [
+            {
+              "reps": 8,
+              "weight_kg": 25.0,
+              "notes": "8x25kg"
+            },
+            {
+              "reps": 8,
+              "weight_kg": 30.0,
+              "notes": "8x30kg"
+            },
+            {
+              "reps": 9,
+              "weight_kg": 30.0,
+              "notes": "9x30kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Incline DB Press",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 15.0,
+              "notes": "12x15kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 15.0,
+              "notes": "12x15kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 17.5,
+              "notes": "10x17.5kg"
+            },
+            {
+              "reps": 9,
+              "weight_kg": 17.5,
+              "notes": "9x17.5kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Pec Fly Machine",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 70.0,
+              "notes": "12x70kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 70.0,
+              "notes": "12x70kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 80.0,
+              "notes": "12x80kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Cable Lateral Raises",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 14.0,
+              "notes": "15x14kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 14.0,
+              "notes": "15x14kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 14.0,
+              "notes": "15x14kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Triceps Overhead Extension",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 10.0,
+              "notes": "12x10kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 15.0,
+              "notes": "12x15kg"
+            },
+            {
+              "reps": 9,
+              "weight_kg": 17.5,
+              "notes": "9x17.5kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Hanging Knee Raises done",
+          "sets": []
+        }
+      ]
+    },
+    {
+      "date": "2026-05-08",
+      "start_time": "18:11",
+      "source": "text_import",
+      "exercises": [
+        {
+          "exercise_name": "Friday \u2014 Pull",
+          "sets": []
+        },
+        {
+          "exercise_name": "Lat Pulldown",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 40.0,
+              "notes": "12x40kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 45.0,
+              "notes": "12x45kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 45.0,
+              "notes": "12x45kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Seated Row Machine",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 75.0,
+              "notes": "12x75kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 90.0,
+              "notes": "12x90kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 95.0,
+              "notes": "12x95kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 105.0,
+              "notes": "12x105kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Face Pulls",
+          "sets": [
+            {
+              "reps": 15,
+              "weight_kg": 36.0,
+              "notes": "15x36kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 41.0,
+              "notes": "15x41kg"
+            },
+            {
+              "reps": 15,
+              "weight_kg": 41.0,
+              "notes": "15x41kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Hammer Curls",
+          "sets": [
+            {
+              "reps": 10,
+              "weight_kg": 12.5,
+              "notes": "10x12.5kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 12.5,
+              "notes": "10x12.5kg"
+            },
+            {
+              "reps": 10,
+              "weight_kg": 12.5,
+              "notes": "10x12.5kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Cable Bicep Curls",
+          "sets": [
+            {
+              "reps": 12,
+              "weight_kg": 23.0,
+              "notes": "12x23kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 27.0,
+              "notes": "12x27kg"
+            },
+            {
+              "reps": 12,
+              "weight_kg": 32.0,
+              "notes": "12x32kg done"
+            }
+          ]
+        },
+        {
+          "exercise_name": "Ab Finisher",
+          "sets": []
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "original_csv_workouts": 22,
+    "text_imported_workouts": 20,
+    "combined_total_workouts": 42
+  }
+}
