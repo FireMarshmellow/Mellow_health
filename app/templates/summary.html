@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Summary — Mellow Health{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Cardio Summary</h2>
+
+<div class="row g-3 mb-4">
+  <div class="col-6 col-md-3">
+    <div class="card stat-card text-center shadow-sm h-100">
+      <div class="card-body d-flex flex-column justify-content-center">
+        <div class="stat-number text-primary">{{ total_activities }}</div>
+        <div class="stat-label">Activities</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3">
+    <div class="card stat-card text-center shadow-sm h-100">
+      <div class="card-body d-flex flex-column justify-content-center">
+        <div class="stat-number text-success">{{ total_distance_km }}</div>
+        <div class="stat-label">Total km</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3">
+    <div class="card stat-card text-center shadow-sm h-100">
+      <div class="card-body d-flex flex-column justify-content-center">
+        <div class="stat-number text-warning">{{ total_time_hours }}</div>
+        <div class="stat-label">Total hours</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3">
+    <div class="card stat-card text-center shadow-sm h-100">
+      <div class="card-body d-flex flex-column justify-content-center">
+        <div class="stat-number text-danger">{{ total_elevation }}</div>
+        <div class="stat-label">Elevation gain (m)</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card shadow-sm">
+  <div class="card-header d-flex align-items-center justify-content-between">
+    <span class="fw-semibold">All Routes</span>
+    <div class="d-flex gap-3 small flex-wrap">
+      <span><span class="legend-dot" style="background:#e74c3c"></span> Run</span>
+      <span><span class="legend-dot" style="background:#2ecc71"></span> Ride</span>
+      <span><span class="legend-dot" style="background:#3498db"></span> Walk</span>
+      <span><span class="legend-dot" style="background:#e67e22"></span> Hike</span>
+      <span><span class="legend-dot" style="background:#9b59b6"></span> HIIT/Workout</span>
+    </div>
+  </div>
+  <div class="card-body p-0">
+    <div id="map"></div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  const TRACKS = {{ tracks_json | safe }};
+</script>
+<script src="/static/js/map.js"></script>
+{% endblock %}

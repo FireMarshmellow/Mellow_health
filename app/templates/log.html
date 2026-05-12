@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+
+{% block title %}Activity Log — Mellow Health{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+{% endblock %}
+
+{# ── Sidebar filters ─────────────────────────────────────── #}
+{% block sidebar_extra %}
+<div class="sidebar-divider"></div>
+<div class="sidebar-filter-section">
+  <div class="sidebar-section-label">Filters</div>
+  <form method="get" id="filter-form">
+    <div class="sidebar-filter-group">
+      <label class="sidebar-filter-label">Sport</label>
+      <select name="sport" class="form-select form-select-sm sidebar-select" onchange="this.form.submit()">
+        <option value="">All types</option>
+        {% for st in sport_types %}
+          <option value="{{ st }}" {% if current_sport == st %}selected{% endif %}>{{ st }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="sidebar-filter-group">
+      <label class="sidebar-filter-label">Sort by</label>
+      <select name="sort" class="form-select form-select-sm sidebar-select" onchange="this.form.submit()">
+        <option value="date"      {% if current_sort == 'date'      %}selected{% endif %}>Date</option>
+        <option value="distance"  {% if current_sort == 'distance'  %}selected{% endif %}>Distance</option>
+        <option value="duration"  {% if current_sort == 'duration'  %}selected{% endif %}>Duration</option>
+        <option value="pace"      {% if current_sort == 'pace'      %}selected{% endif %}>Pace</option>
+        <option value="elevation" {% if current_sort == 'elevation' %}selected{% endif %}>Elevation</option>
+        <option value="hr"        {% if current_sort == 'hr'        %}selected{% endif %}>Heart Rate</option>
+      </select>
+    </div>
+    <div class="sidebar-filter-group">
+      <label class="sidebar-filter-label">Order</label>
+      <select name="order" class="form-select form-select-sm sidebar-select" onchange="this.form.submit()">
+        <option value="desc" {% if current_order == 'desc' %}selected{% endif %}>Newest / Highest</option>
+        <option value="asc"  {% if current_order == 'asc'  %}selected{% endif %}>Oldest / Lowest</option>
+      </select>
+    </div>
+  </form>
+</div>
+{% endblock %}
+
+{# ── Macros ──────────────────────────────────────────────── #}
+{% macro fmt_pace(secs) %}
+  {%- if secs -%}
+    {{- (secs // 60) | int -}}:{{- "%02d" | format((secs % 60) | int) -}}
+  {%- else -%}—{%- endif -%}
+{% endmacro %}
+
+{% macro fmt_duration(secs) %}
+  {%- if secs -%}
+    {%- set h = (secs // 3600) | int -%}
+    {%- set m = ((secs % 3600) // 60) | int -%}
+    {%- set s = (secs % 60) | int -%}
+    {%- if h > 0 -%}{{ h }}:{{ "%02d" | format(m) }}:{{ "%02d" | format(s) }}
+    {%- else -%}{{ m }}:{{ "%02d" | format(s) }}{%- endif -%}
+  {%- else -%}—{%- endif -%}
+{% endmacro %}
+
+{% macro fmt_val(v, unit="", digits=0) %}
+  {%- if v is not none and v != "" -%}
+    {{- "%.{}f".format(digits) | format(v) -}}{% if unit %} {{ unit }}{% endif %}
+  {%- else -%}—{%- endif -%}
+{% endmacro %}
+
+{# ── Main content ────────────────────────────────────────── #}
+{% block content %}
+<div class="d-flex align-items-baseline justify-content-between mb-3">
+  <h2 class="mb-0 fs-4 fw-semibold">Activity Log</h2>
+  <span class="text-muted small">{{ activities | length }} activities</span>
+</div>
+
+<div class="card shadow-sm border-0">
+  <div class="table-responsive">
+    <table class="table table-hover mb-0">
+      <thead class="table-dark">
+        <tr>
+          <th>Date</th>
+          <th>Type</th>
+          <th>Name</th>
+          <th class="text-end">km</th>
+          <th class="text-end">Time</th>
+          <th class="text-end">Pace</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for a in activities %}
+
+        {# ── Compact row ── #}
+        <tr class="activity-row"
+            data-activity-id="{{ a.id }}"
+            data-has-gps="{{ 'true' if a.has_gps else 'false' }}">
+          <td class="text-muted small text-nowrap">
+            {{ a.start_date.strftime('%Y-%m-%d') if a.start_date else '—' }}
+          </td>
+          <td>
+            <span class="badge sport-badge sport-{{ a.sport_type | lower }}">{{ a.sport_type }}</span>
+          </td>
+          <td>{{ a.name }}</td>
+          <td class="text-end">
+            {{ "%.2f" | format(a.distance_meters / 1000) if a.distance_meters else '—' }}
+          </td>
+          <td class="text-end text-nowrap">{{ fmt_duration(a.moving_time_seconds) }}</td>
+          <td class="text-end text-nowrap">{{ fmt_pace(a.avg_pace_sec_per_km) }}</td>
+          <td class="text-end pe-3" style="width:32px">
+            <span class="activity-chevron">›</span>
+          </td>
+        </tr>
+
+        {# ── Detail row ── #}
+        <tr class="activity-detail-row" id="detail-{{ a.id }}" style="display:none">
+          <td colspan="7">
+            <div class="activity-detail-panel">
+
+              {# Left: stats #}
+              <div class="activity-detail-stats">
+                <div class="detail-name">
+                  {{ a.name }}
+                  <span class="source-badge">{{ a.source | replace("_", " ") if a.source else "unknown" }}</span>
+                </div>
+                <div class="detail-stats-grid">
+                  <span class="detail-stat-label">Date</span>
+                  <span class="detail-stat-value">
+                    {{ a.start_date.strftime('%d %b %Y, %H:%M') if a.start_date else '—' }}
+                  </span>
+
+                  <span class="detail-stat-label">Distance</span>
+                  <span class="detail-stat-value">{{ fmt_val(a.distance_meters / 1000 if a.distance_meters else none, "km", 2) }}</span>
+
+                  <span class="detail-stat-label">Moving time</span>
+                  <span class="detail-stat-value">{{ fmt_duration(a.moving_time_seconds) }}</span>
+
+                  <span class="detail-stat-label">Pace</span>
+                  <span class="detail-stat-value">{{ fmt_pace(a.avg_pace_sec_per_km) }} /km</span>
+
+                  <span class="detail-stat-label">Speed</span>
+                  <span class="detail-stat-value">{{ fmt_val(a.avg_speed_kmh, "km/h", 1) }}</span>
+
+                  <span class="detail-stat-label">Elevation</span>
+                  <span class="detail-stat-value">{{ fmt_val(a.elevation_gain, "m", 0) }}</span>
+
+                  <span class="detail-stat-label">Avg HR</span>
+                  <span class="detail-stat-value">{{ fmt_val(a.avg_heart_rate, "bpm", 0) }}</span>
+
+                  <span class="detail-stat-label">Max HR</span>
+                  <span class="detail-stat-value">{{ fmt_val(a.max_heart_rate, "bpm", 0) }}</span>
+
+                  <span class="detail-stat-label">Calories</span>
+                  <span class="detail-stat-value">{{ fmt_val(a.calories, "kcal", 0) }}</span>
+                </div>
+              </div>
+
+              {# Right: mini map #}
+              <div class="activity-detail-map" id="mini-map-{{ a.id }}">
+                {% if not a.has_gps %}
+                <div class="no-gps-msg">
+                  <span class="no-gps-icon">📍</span>No GPS data
+                </div>
+                {% endif %}
+              </div>
+
+            </div>
+          </td>
+        </tr>
+
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="/static/js/log.js"></script>
+{% endblock %}

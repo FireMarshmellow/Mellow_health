@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Mellow Health{% endblock %}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  {% block extra_css %}{% endblock %}
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <nav id="sidebar">
+    <div class="sidebar-brand">Mellow Health</div>
+
+    <div class="sidebar-section-label">Cardio</div>
+    <a href="/summary" class="sidebar-link {% if request.url.path == '/summary' %}active{% endif %}">
+      <i class="bi bi-map"></i> Summary
+    </a>
+    <a href="/log" class="sidebar-link {% if request.url.path == '/log' %}active{% endif %}">
+      <i class="bi bi-list-ul"></i> Activity Log
+    </a>
+
+    {% block sidebar_extra %}{% endblock %}
+  </nav>
+
+  <!-- Main content -->
+  <div id="main-content">
+    {% block content %}{% endblock %}
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

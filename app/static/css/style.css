@@ -1,0 +1,292 @@
+/* ── Layout ─────────────────────────────────────────────── */
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background: #f0f2f5;
+  margin: 0;
+}
+
+/* ── Sidebar ────────────────────────────────────────────── */
+
+#sidebar {
+  width: 220px;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #1a1d21;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+.sidebar-brand {
+  padding: 1.2rem 1.25rem 1rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  letter-spacing: 0.4px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  flex-shrink: 0;
+}
+
+.sidebar-section-label {
+  padding: 1.1rem 1.25rem 0.35rem;
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: rgba(255,255,255,0.35);
+  text-transform: uppercase;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1.25rem;
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  font-size: 0.875rem;
+  border-left: 3px solid transparent;
+  transition: color 0.12s, border-color 0.12s, background 0.12s;
+}
+
+.sidebar-link:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.05);
+}
+
+.sidebar-link.active {
+  color: #fff;
+  border-left-color: #0d6efd;
+  background: rgba(255,255,255,0.07);
+}
+
+.sidebar-divider {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin: 0.5rem 0;
+}
+
+.sidebar-filter-section {
+  padding-bottom: 1rem;
+}
+
+.sidebar-filter-group {
+  padding: 0.3rem 1rem 0.3rem 1.25rem;
+}
+
+.sidebar-filter-label {
+  display: block;
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 0.2rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.sidebar-select {
+  background-color: #2a2d31 !important;
+  border-color: rgba(255,255,255,0.12) !important;
+  color: rgba(255,255,255,0.8) !important;
+  font-size: 0.78rem !important;
+}
+
+.sidebar-select:focus {
+  border-color: #0d6efd !important;
+  color: #fff !important;
+  box-shadow: 0 0 0 0.15rem rgba(13,110,253,0.3) !important;
+}
+
+.sidebar-select option {
+  background: #2a2d31;
+  color: #fff;
+}
+
+/* ── Main content ───────────────────────────────────────── */
+
+#main-content {
+  margin-left: 220px;
+  min-height: 100vh;
+  width: calc(100% - 220px);
+  padding: 1.5rem 1.75rem;
+}
+
+/* ── Stat cards (summary page) ──────────────────────────── */
+
+.stat-card {
+  border: none;
+  border-radius: 12px;
+}
+
+.stat-number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 0.82rem;
+  color: #6c757d;
+  margin-top: 4px;
+}
+
+/* ── Summary map ────────────────────────────────────────── */
+
+#map {
+  height: 540px;
+  border-radius: 0 0 8px 8px;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+/* ── Activity log table ─────────────────────────────────── */
+
+.activity-row {
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.1s;
+}
+
+.activity-row:hover {
+  background: #f0f4ff !important;
+}
+
+.activity-row.expanded {
+  background: #e8eeff !important;
+}
+
+.activity-chevron {
+  font-size: 1.1rem;
+  color: #adb5bd;
+  transition: transform 0.2s;
+  display: inline-block;
+  line-height: 1;
+}
+
+.activity-row.expanded .activity-chevron {
+  transform: rotate(90deg);
+  color: #0d6efd;
+}
+
+/* ── Activity detail panel ──────────────────────────────── */
+
+.activity-detail-row td {
+  padding: 0 !important;
+  border-top: none !important;
+}
+
+.activity-detail-panel {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  border-top: 2px solid #0d6efd;
+  background: #fff;
+}
+
+.activity-detail-stats {
+  padding: 1rem 1.1rem;
+  border-right: 1px solid #e9ecef;
+}
+
+.activity-detail-stats .detail-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+  color: #212529;
+}
+
+.activity-detail-stats .source-badge {
+  font-size: 0.68rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 20px;
+  background: #e9ecef;
+  color: #6c757d;
+  font-weight: 500;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+  text-transform: capitalize;
+}
+
+.detail-stats-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 0.75rem;
+}
+
+.detail-stat-label {
+  font-size: 0.72rem;
+  color: #6c757d;
+  font-weight: 500;
+  align-self: center;
+  white-space: nowrap;
+}
+
+.detail-stat-value {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #212529;
+  align-self: center;
+}
+
+.activity-detail-map {
+  height: 260px;
+  background: #e9ecef;
+  position: relative;
+}
+
+.no-gps-msg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  font-size: 0.875rem;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.no-gps-icon {
+  font-size: 1.5rem;
+  opacity: 0.4;
+}
+
+/* ── Sport badges ───────────────────────────────────────── */
+
+.sport-badge {
+  font-size: 0.72rem;
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 0.18rem 0.45rem;
+}
+
+.sport-badge.sport-run        { background-color: #e74c3c; }
+.sport-badge.sport-ride       { background-color: #2ecc71; }
+.sport-badge.sport-walk       { background-color: #3498db; }
+.sport-badge.sport-hike       { background-color: #e67e22; }
+.sport-badge.sport-hiit       { background-color: #9b59b6; }
+.sport-badge.sport-workout    { background-color: #9b59b6; }
+.sport-badge.sport-yoga       { background-color: #1abc9c; color: #fff; }
+.sport-badge.sport-swim       { background-color: #0dcaf0; color: #212529; }
+.sport-badge.sport-crosstrain { background-color: #fd7e14; }
+
+/* ── Table tweaks ───────────────────────────────────────── */
+
+.table th {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.table td {
+  font-size: 0.85rem;
+  vertical-align: middle;
+}

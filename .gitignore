@@ -1,0 +1,6 @@
+.env
+mellow_health.db
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
