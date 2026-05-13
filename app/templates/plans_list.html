@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %}Workout Plans — Mellow Health{% endblock %}
+
+{% block content %}
+<div class="d-flex align-items-center justify-content-between mb-4">
+  <h2 class="fs-4 fw-semibold mb-0">Workout Plans</h2>
+  <a href="/strength/plans/upload" class="btn btn-primary btn-sm">
+    <i class="bi bi-upload me-1"></i> Upload Plan
+  </a>
+</div>
+
+{% if not plans %}
+<div class="card text-center py-5" style="max-width:480px;margin:0 auto">
+  <div class="card-body">
+    <i class="bi bi-calendar-week" style="font-size:2.5rem;color:rgba(255,255,255,0.2)"></i>
+    <p class="mt-3 mb-1 fw-semibold">No plans yet</p>
+    <p class="text-muted small mb-3">Upload a JSON plan from Claude to get started.</p>
+    <a href="/strength/plans/upload" class="btn btn-primary btn-sm">Upload your first plan</a>
+  </div>
+</div>
+{% else %}
+<div class="row g-3">
+  {% for plan in plans %}
+  {% set cc = completion_counts[plan.id] %}
+  <div class="col-sm-6 col-lg-4" id="plan-col-{{ plan.id }}">
+    <div class="card plan-list-card h-100 position-relative"
+         style="cursor:pointer"
+         onclick="location.href='/strength/plans/{{ plan.id }}'">
+      <button class="btn btn-sm position-absolute p-1"
+              style="top:0.5rem;right:0.5rem;z-index:2;background:transparent;border:none"
+              onclick="event.stopPropagation(); deletePlan({{ plan.id }}, this)"
+              title="Delete plan">
+        <i class="bi bi-trash3" style="font-size:0.85rem;color:rgba(255,255,255,0.25)"></i>
+      </button>
+      <div class="card-body pe-5">
+        <div class="fw-semibold mb-1">{{ plan.plan_name }}</div>
+        <div class="text-muted small mb-3">
+          Uploaded {{ plan.uploaded_at.strftime("%d %b %Y") if plan.uploaded_at else "—" }}
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <div class="progress flex-grow-1" style="height:6px;background:rgba(255,255,255,0.1)">
+            {% set pct = ((cc.done / cc.total * 100) | int) if cc.total > 0 else 0 %}
+            <div class="progress-bar"
+                 style="width:{{ pct }}%;background:#30D158"></div>
+          </div>
+          <span class="small text-muted">{{ cc.done }}/{{ cc.total }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<script>
+async function deletePlan(planId, btnEl) {
+  if (!confirm('Delete this plan and all its days?')) return;
+  try {
+    const resp = await fetch(`/strength/plans/${planId}`, { method: 'DELETE' });
+    if (!resp.ok) {
+      const err = await resp.json().catch(() => ({ detail: 'Server error' }));
+      alert(err.detail || 'Could not delete plan');
+      return;
+    }
+    document.getElementById(`plan-col-${planId}`).remove();
+  } catch {
+    alert('Network error — could not delete plan');
+  }
+}
+</script>
+{% endif %}
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.plan-list-card {
+  border-color: rgba(255,255,255,0.08);
+  transition: border-color 0.15s;
+}
+.plan-list-card:hover {
+  border-color: rgba(10,132,255,0.4);
+}
+.plan-list-card button:hover i {
+  color: #FF375F !important;
+}
+</style>
+{% endblock %}

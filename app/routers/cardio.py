@@ -80,7 +80,8 @@ def log_page(
 
     activities = query.all()
     sport_types = sorted(
-        r[0] for r in db.query(Activity.sport_type).distinct().all() if r[0]
+        r[0] for r in db.query(Activity.sport_type).distinct().all()
+        if r[0] and r[0] not in {"Hike", "HIIT/Workout"}
     )
 
     return templates.TemplateResponse("log.html", {

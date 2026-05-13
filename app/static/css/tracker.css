@@ -1,0 +1,276 @@
+/* ── Tracker sticky header ─────────────────────────────── */
+
+.tracker-header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  flex-wrap: nowrap;
+}
+
+.tracker-title {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.95rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tracker-timer-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.tracker-timer {
+  font-size: 1.35rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: #30D158;
+  letter-spacing: 1px;
+  min-width: 68px;
+  text-align: center;
+}
+
+/* ── Exercise cards ────────────────────────────────────── */
+
+.tracker-exercises {
+  padding: 1rem;
+  padding-bottom: 6rem;
+}
+
+.exercise-card {
+  background: #1c1c1e;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.exercise-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.65rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.ex-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* ── Set rows ──────────────────────────────────────────── */
+
+.set-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+
+.set-row:last-child {
+  border-bottom: none;
+}
+
+.set-row.set-completed {
+  opacity: 0.55;
+  background: rgba(48, 209, 88, 0.07);
+}
+
+.set-number {
+  background: #BF5AF2;
+  color: #fff;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.set-inputs {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex: 1;
+  flex-wrap: nowrap;
+}
+
+.set-inputs .form-control {
+  width: 68px;
+  background: #2c2c2e;
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.4rem;
+  border-radius: 8px;
+}
+
+.set-inputs .form-control:focus {
+  background: #3a3a3c;
+  border-color: #0A84FF;
+  box-shadow: 0 0 0 0.15rem rgba(10, 132, 255, 0.25);
+  color: #fff;
+}
+
+.set-inputs input[type=number]::-webkit-inner-spin-button,
+.set-inputs input[type=number]::-webkit-outer-spin-button {
+  opacity: 0.4;
+}
+
+.set-sep       { font-size: 0.78rem; color: rgba(255,255,255,0.35); white-space: nowrap; }
+.set-sep-small { font-size: 0.72rem; color: rgba(255,255,255,0.3);  white-space: nowrap; }
+
+/* ── Set action buttons ────────────────────────────────── */
+
+.set-actions {
+  display: flex;
+  gap: 0.25rem;
+  flex-shrink: 0;
+}
+
+.set-complete-btn {
+  color: rgba(255,255,255,0.25);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 0.25rem 0.45rem;
+  font-size: 0.85rem;
+  background: transparent;
+  transition: all 0.12s;
+  line-height: 1;
+}
+
+.set-complete-btn.active,
+.set-complete-btn:hover {
+  color: #30D158;
+  border-color: #30D158;
+  background: rgba(48, 209, 88, 0.1);
+}
+
+.set-delete-btn {
+  color: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  padding: 0.25rem 0.45rem;
+  font-size: 0.8rem;
+  background: transparent;
+  transition: all 0.12s;
+  line-height: 1;
+}
+
+.set-delete-btn:hover {
+  color: #FF375F;
+  border-color: #FF375F;
+  background: rgba(255, 55, 95, 0.1);
+}
+
+/* ── Add Set button ────────────────────────────────────── */
+
+.add-set-btn {
+  margin-top: 0.5rem;
+  color: #0A84FF;
+  border: 1px dashed rgba(10, 132, 255, 0.35);
+  background: rgba(10, 132, 255, 0.06);
+  border-radius: 8px;
+  font-size: 0.82rem;
+  padding: 0.3rem 0.75rem;
+  width: 100%;
+  transition: all 0.12s;
+}
+
+.add-set-btn:hover {
+  background: rgba(10, 132, 255, 0.14);
+  border-color: #0A84FF;
+  color: #fff;
+}
+
+/* ── Sticky footer ─────────────────────────────────────── */
+
+.tracker-footer {
+  position: fixed;
+  bottom: 0;
+  left: 220px;
+  right: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.75rem 1.25rem;
+}
+
+@media (max-width: 767px) {
+  .tracker-footer {
+    left: 0;
+  }
+  .tracker-header {
+    top: 52px;
+  }
+}
+
+/* ── Plan overview — day cards ─────────────────────────── */
+
+.plan-day-card {
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.plan-day-delete-btn:hover i {
+  color: #FF375F !important;
+}
+
+.plan-day-card:hover {
+  border-color: rgba(10, 132, 255, 0.4) !important;
+  box-shadow: 0 0 0 1px rgba(10, 132, 255, 0.2);
+}
+
+.plan-day-card.plan-day-done {
+  border-color: rgba(48, 209, 88, 0.35) !important;
+  background: rgba(48, 209, 88, 0.05) !important;
+}
+
+.plan-day-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  margin-bottom: 0.2rem;
+}
+
+.plan-day-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.plan-day-meta {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.plan-day-done-badge {
+  color: #30D158;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}

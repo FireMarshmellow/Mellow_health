@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}Upload Plan — Mellow Health{% endblock %}
+
+{% block content %}
+<div class="mb-4">
+  <a href="/strength/plans" class="text-decoration-none text-muted small">
+    <i class="bi bi-arrow-left me-1"></i>Back to Plans
+  </a>
+</div>
+
+<h2 class="fs-4 fw-semibold mb-4">Upload Workout Plan</h2>
+
+<div class="card" style="max-width:540px">
+  <div class="card-body">
+    {% if error %}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      {{ error }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data" action="/strength/plans/upload">
+      <div class="mb-3">
+        <label class="form-label fw-semibold">JSON Plan File</label>
+        <input type="file" name="file" accept=".json" class="form-control" required>
+        <div class="form-text">Generate a week's workouts from Claude and export as .json</div>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">
+        <i class="bi bi-upload me-1"></i> Upload Plan
+      </button>
+    </form>
+  </div>
+</div>
+
+<div class="card mt-4" style="max-width:540px">
+  <div class="card-body">
+    <p class="fw-semibold small mb-2">Expected JSON format</p>
+    <pre class="mb-0" style="font-size:0.75rem;color:rgba(255,255,255,0.6);white-space:pre-wrap">{
+  "plan_name": "Week 1 Hypertrophy",
+  "workouts": [
+    {
+      "day_label": "Monday",
+      "workout_name": "My Push Workout",
+      "muscle_group": "Chest",
+      "exercises": [
+        {
+          "name": "Bench Press",
+          "muscle_group": "Chest",
+          "sets": [
+            { "weight_kg": 80, "reps": 8 },
+            { "weight_kg": 80, "reps": 8 },
+            { "weight_kg": 80, "reps": 8 }
+          ]
+        }
+      ]
+    }
+  ]
+}</pre>
+    <p class="small mt-2 mb-0" style="color:rgba(255,255,255,0.4)">
+      Valid muscle groups: <code>Full Body</code> · <code>Legs</code> · <code>Back</code> ·
+      <code>Chest</code> · <code>Shoulders</code> · <code>Arms</code> · <code>Core</code> · <code>Glutes</code>
+    </p>
+  </div>
+</div>
+{% endblock %}

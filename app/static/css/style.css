@@ -1,13 +1,55 @@
-/* ── Layout ─────────────────────────────────────────────── */
+/* ── Override Bootstrap CSS variables before anything else ── */
+
+:root {
+  --bs-body-bg: #000;
+  --bs-body-color: #fff;
+  --bs-body-color-rgb: 255, 255, 255;
+  --bs-card-bg: #1c1c1e;
+  --bs-card-border-color: rgba(255,255,255,0.08);
+  --bs-table-bg: transparent;
+  --bs-table-striped-bg: transparent;
+  --bs-table-hover-bg: rgba(255,255,255,0.04);
+  --bs-table-color: rgba(255,255,255,0.8);
+  --bs-table-border-color: rgba(255,255,255,0.06);
+  --bs-border-color: rgba(255,255,255,0.1);
+}
+
+/* ── Base ────────────────────────────────────────────────── */
 
 body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', system-ui, sans-serif;
   display: flex;
   min-height: 100vh;
-  background: #f0f2f5;
+  background: #000 !important;
+  color: #fff;
   margin: 0;
 }
 
-/* ── Sidebar ────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+}
+
+.text-muted {
+  color: rgba(255,255,255,0.4) !important;
+}
+
+/* ── Bootstrap card → dark ───────────────────────────────── */
+
+.card {
+  background-color: #1c1c1e !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 16px !important;
+  color: #fff !important;
+}
+
+.card-header {
+  background-color: rgba(255,255,255,0.04) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+  color: rgba(255,255,255,0.85) !important;
+  font-size: 0.875rem;
+}
+
+/* ── Sidebar ─────────────────────────────────────────────── */
 
 #sidebar {
   width: 220px;
@@ -15,11 +57,12 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background: #1a1d21;
+  background: #111115;
   display: flex;
   flex-direction: column;
-  z-index: 100;
+  z-index: 1100;
   overflow-y: auto;
+  border-right: 1px solid rgba(255,255,255,0.06);
 }
 
 .sidebar-brand {
@@ -46,7 +89,7 @@ body {
   align-items: center;
   gap: 0.5rem;
   padding: 0.45rem 1.25rem;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.6);
   text-decoration: none;
   font-size: 0.875rem;
   border-left: 3px solid transparent;
@@ -60,8 +103,8 @@ body {
 
 .sidebar-link.active {
   color: #fff;
-  border-left-color: #0d6efd;
-  background: rgba(255,255,255,0.07);
+  border-left-color: #0A84FF;
+  background: rgba(10,132,255,0.12);
 }
 
 .sidebar-divider {
@@ -69,13 +112,9 @@ body {
   margin: 0.5rem 0;
 }
 
-.sidebar-filter-section {
-  padding-bottom: 1rem;
-}
+.sidebar-filter-section { padding-bottom: 1rem; }
 
-.sidebar-filter-group {
-  padding: 0.3rem 1rem 0.3rem 1.25rem;
-}
+.sidebar-filter-group { padding: 0.3rem 1rem 0.3rem 1.25rem; }
 
 .sidebar-filter-label {
   display: block;
@@ -94,30 +133,32 @@ body {
 }
 
 .sidebar-select:focus {
-  border-color: #0d6efd !important;
+  border-color: #0A84FF !important;
   color: #fff !important;
-  box-shadow: 0 0 0 0.15rem rgba(13,110,253,0.3) !important;
+  box-shadow: 0 0 0 0.15rem rgba(10,132,255,0.3) !important;
 }
 
-.sidebar-select option {
-  background: #2a2d31;
-  color: #fff;
-}
+.sidebar-select option { background: #2a2d31; color: #fff; }
 
-/* ── Main content ───────────────────────────────────────── */
+/* ── Main content ────────────────────────────────────────── */
 
 #main-content {
   margin-left: 220px;
   min-height: 100vh;
   width: calc(100% - 220px);
   padding: 1.5rem 1.75rem;
+  background: #000;
 }
 
-/* ── Stat cards (summary page) ──────────────────────────── */
+.table-responsive {
+  background: transparent !important;
+}
+
+/* ── Stat cards ──────────────────────────────────────────── */
 
 .stat-card {
-  border: none;
-  border-radius: 12px;
+  border: none !important;
+  border-radius: 16px !important;
 }
 
 .stat-number {
@@ -128,15 +169,15 @@ body {
 
 .stat-label {
   font-size: 0.82rem;
-  color: #6c757d;
+  color: rgba(255,255,255,0.4);
   margin-top: 4px;
 }
 
-/* ── Summary map ────────────────────────────────────────── */
+/* ── Summary map ─────────────────────────────────────────── */
 
 #map {
   height: 540px;
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 12px 12px;
 }
 
 .legend-dot {
@@ -147,25 +188,196 @@ body {
   margin-right: 4px;
 }
 
-/* ── Activity log table ─────────────────────────────────── */
+/* ── Log card ────────────────────────────────────────────── */
 
-.activity-row {
+.log-card {
+  background: #1c1c1e;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  /* Subtle Apple-style gradient accent on top */
+  border-top: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+}
+
+.log-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #FF375F 0%, #FF9F0A 25%, #30D158 50%, #0A84FF 75%, #BF5AF2 100%);
+  border-radius: 16px 16px 0 0;
+}
+
+.log-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  background: rgba(0,0,0,0.25);
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.log-count {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.3);
+  white-space: nowrap;
+}
+
+/* ── Sport filter pills ──────────────────────────────────── */
+
+.log-sport-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.sport-pill {
+  display: inline-block;
+  padding: 0.22rem 0.72rem;
+  border-radius: 20px;
+  font-size: 0.73rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.12s;
+  letter-spacing: 0.2px;
+}
+
+.sport-pill:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.11);
+  border-color: rgba(255,255,255,0.18);
+}
+
+.sport-pill.active {
+  color: #fff;
+  background: #0A84FF;
+  border-color: #0A84FF;
+}
+
+/* ── Dark table ──────────────────────────────────────────── */
+
+/* Reset all Bootstrap table cell backgrounds — Bootstrap injects
+   bg via CSS custom props on individual td/tr elements */
+.log-table > :not(caption) > * {
+  background-color: transparent !important;
+  border-color: rgba(255,255,255,0.06) !important;
+}
+
+.log-table > :not(caption) > * > * {
+  background-color: transparent !important;
+  color: rgba(255,255,255,0.8);
+  box-shadow: none !important;
+}
+
+.log-table {
+  color: rgba(255,255,255,0.75);
+  background: transparent;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.log-table thead tr {
+  background: rgba(0,0,0,0.3);
+}
+
+.log-table thead th {
+  padding: 0.72rem 1rem;
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.log-table thead th.sort-active {
+  color: #0A84FF;
+}
+
+/* Strength sort-active uses purple */
+.strength-log-table thead th.sort-active {
+  color: #BF5AF2;
+}
+
+.sort-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.12s;
+  cursor: pointer;
+}
+
+.sort-link:hover {
+  color: #fff !important;
+}
+
+.sortable-th {
+  cursor: pointer;
+  transition: color 0.12s;
+}
+
+.sortable-th:hover {
+  color: rgba(255,255,255,0.8) !important;
+}
+
+.sort-idle {
+  opacity: 0.25;
+  font-size: 0.65rem;
+}
+
+.log-table tbody tr.activity-row {
+  border-bottom: 1px solid rgba(255,255,255,0.04);
   cursor: pointer;
   user-select: none;
   transition: background 0.1s;
 }
 
-.activity-row:hover {
-  background: #f0f4ff !important;
+.log-table tbody tr.activity-row:hover {
+  background: rgba(255,255,255,0.04) !important;
 }
 
-.activity-row.expanded {
-  background: #e8eeff !important;
+.log-table tbody tr.activity-row.expanded {
+  background: rgba(10,132,255,0.1) !important;
+}
+
+.strength-row.expanded {
+  background: rgba(191,90,242,0.1) !important;
+}
+
+.log-table td {
+  padding: 0.72rem 1rem;
+  border: none;
+  vertical-align: middle;
+}
+
+.log-date {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.5);
+}
+
+.log-num {
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  color: rgba(255,255,255,0.85);
 }
 
 .activity-chevron {
   font-size: 1.1rem;
-  color: #adb5bd;
+  color: rgba(255,255,255,0.2);
   transition: transform 0.2s;
   display: inline-block;
   line-height: 1;
@@ -173,41 +385,45 @@ body {
 
 .activity-row.expanded .activity-chevron {
   transform: rotate(90deg);
-  color: #0d6efd;
+  color: #0A84FF;
 }
 
-/* ── Activity detail panel ──────────────────────────────── */
+.strength-row.expanded .activity-chevron {
+  color: #BF5AF2;
+}
+
+/* ── Activity detail panel ───────────────────────────────── */
 
 .activity-detail-row td {
   padding: 0 !important;
-  border-top: none !important;
+  border: none !important;
 }
 
 .activity-detail-panel {
   display: grid;
   grid-template-columns: 280px 1fr;
-  border-top: 2px solid #0d6efd;
-  background: #fff;
+  border-top: 2px solid #0A84FF;
+  background: #111113;
 }
 
 .activity-detail-stats {
   padding: 1rem 1.1rem;
-  border-right: 1px solid #e9ecef;
+  border-right: 1px solid rgba(255,255,255,0.06);
 }
 
 .activity-detail-stats .detail-name {
   font-weight: 600;
   font-size: 0.9rem;
   margin-bottom: 0.6rem;
-  color: #212529;
+  color: rgba(255,255,255,0.9);
 }
 
 .activity-detail-stats .source-badge {
   font-size: 0.68rem;
   padding: 0.15rem 0.45rem;
   border-radius: 20px;
-  background: #e9ecef;
-  color: #6c757d;
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.4);
   font-weight: 500;
   margin-left: 0.4rem;
   vertical-align: middle;
@@ -222,7 +438,7 @@ body {
 
 .detail-stat-label {
   font-size: 0.72rem;
-  color: #6c757d;
+  color: rgba(255,255,255,0.35);
   font-weight: 500;
   align-self: center;
   white-space: nowrap;
@@ -231,13 +447,13 @@ body {
 .detail-stat-value {
   font-size: 0.85rem;
   font-weight: 600;
-  color: #212529;
+  color: rgba(255,255,255,0.85);
   align-self: center;
 }
 
 .activity-detail-map {
   height: 260px;
-  background: #e9ecef;
+  background: #0d0d10;
   position: relative;
 }
 
@@ -247,7 +463,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #6c757d;
+  color: rgba(255,255,255,0.25);
   font-size: 0.875rem;
   flex-direction: column;
   gap: 0.4rem;
@@ -258,35 +474,276 @@ body {
   opacity: 0.4;
 }
 
-/* ── Sport badges ───────────────────────────────────────── */
+/* ── Sport badges ────────────────────────────────────────── */
 
 .sport-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 0.2rem 0.5rem;
+  letter-spacing: 0.2px;
+}
+
+.sport-badge.sport-run        { background: #FF375F; color: #fff; }
+.sport-badge.sport-ride       { background: #30D158; color: #fff; }
+.sport-badge.sport-walk       { background: #0A84FF; color: #fff; }
+.sport-badge.sport-hike       { background: #FF9F0A; color: #fff; }
+.sport-badge.sport-hiit       { background: #BF5AF2; color: #fff; }
+.sport-badge.sport-workout    { background: #BF5AF2; color: #fff; }
+.sport-badge.sport-yoga       { background: #32D2B3; color: #fff; }
+.sport-badge.sport-swim       { background: #64D2FF; color: #000; }
+.sport-badge.sport-crosstrain { background: #FF9F0A; color: #fff; }
+
+/* ── Strength detail panel ───────────────────────────────── */
+
+.strength-detail-row td {
+  padding: 0 !important;
+  border-top: none !important;
+}
+
+.strength-detail-panel {
+  padding: 1rem 1.25rem 1.25rem;
+  border-top: 2px solid #BF5AF2;
+  background: #111113;
+}
+
+.strength-meta {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.exercise-block {
+  background: #1c1c1e;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px;
+  padding: 0.65rem 0.85rem;
+}
+
+.exercise-header {
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Row 1: name + badge side by side, wraps if long */
+.ex-title-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.2rem;
+}
+
+.ex-name {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.9);
+  word-break: break-word;
+}
+
+/* Row 2: volume always on its own line, never competes for space */
+.ex-volume {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.3);
+}
+
+.sets-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.set-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: #2c2c2e;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.set-num {
+  background: #BF5AF2;
+  color: #fff;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.68rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.set-weight { font-weight: 600; color: rgba(255,255,255,0.9); }
+.set-sep    { color: rgba(255,255,255,0.25); font-size: 0.7rem; }
+.set-reps   { color: rgba(255,255,255,0.55); }
+
+/* ── Muscle group badges ─────────────────────────────────── */
+
+.muscle-badge {
   font-size: 0.72rem;
   font-weight: 500;
   border-radius: 4px;
   padding: 0.18rem 0.45rem;
+  color: #fff;
 }
 
-.sport-badge.sport-run        { background-color: #e74c3c; }
-.sport-badge.sport-ride       { background-color: #2ecc71; }
-.sport-badge.sport-walk       { background-color: #3498db; }
-.sport-badge.sport-hike       { background-color: #e67e22; }
-.sport-badge.sport-hiit       { background-color: #9b59b6; }
-.sport-badge.sport-workout    { background-color: #9b59b6; }
-.sport-badge.sport-yoga       { background-color: #1abc9c; color: #fff; }
-.sport-badge.sport-swim       { background-color: #0dcaf0; color: #212529; }
-.sport-badge.sport-crosstrain { background-color: #fd7e14; }
+.muscle-badge.muscle-arms        { background-color: #BF5AF2; }
+.muscle-badge.muscle-chest       { background-color: #FF375F; }
+.muscle-badge.muscle-back        { background-color: #0A84FF; }
+.muscle-badge.muscle-legs        { background-color: #30D158; }
+.muscle-badge.muscle-shoulders   { background-color: #FF9F0A; }
+.muscle-badge.muscle-core        { background-color: #32D2B3; }
+.muscle-badge.muscle-full-body   { background-color: #FF9F0A; }
+.muscle-badge.muscle-push        { background-color: #FF375F; }
+.muscle-badge.muscle-pull        { background-color: #0A84FF; }
+.muscle-badge.muscle-other       { background-color: #636366; }
 
-/* ── Table tweaks ───────────────────────────────────────── */
+/* ── Strength table tweaks ───────────────────────────────── */
 
-.table th {
+.strength-table th {
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.2px;
   white-space: nowrap;
 }
 
-.table td {
+.strength-table td {
   font-size: 0.85rem;
   vertical-align: middle;
 }
+
+/* ── Mobile top bar (hidden on desktop) ──────────────────── */
+
+#mobile-topbar {
+  display: none;
+}
+
+#mobile-topbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 52px;
+  background: #111115;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  align-items: center;
+  padding: 0 1rem;
+  gap: 0.75rem;
+  z-index: 1200;
+}
+
+#hamburger-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 0.1rem 0.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-brand {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #fff;
+  letter-spacing: 0.3px;
+}
+
+/* ── Sidebar close button (only visible on mobile) ───────── */
+
+#sidebar-close {
+  display: none;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.5);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0;
+  margin-left: auto;
+  line-height: 1;
+}
+
+/* ── Drawer backdrop ─────────────────────────────────────── */
+
+#menu-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: 1050;
+}
+
+#menu-backdrop.visible {
+  display: block;
+}
+
+/* ── Mobile breakpoint ───────────────────────────────────── */
+
+@media (max-width: 767px) {
+
+  /* Show top bar */
+  #mobile-topbar { display: flex; }
+
+  /* Show the X button inside the sidebar brand */
+  #sidebar-close { display: block; }
+
+  /* Sidebar becomes a slide-in drawer */
+  #sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    z-index: 1100;
+    top: 0;
+  }
+
+  #sidebar.open {
+    transform: translateX(0);
+  }
+
+  /* Full-width main, shifted down below topbar */
+  #main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 1rem 0.85rem 2rem;
+    padding-top: calc(52px + 1rem);
+  }
+
+  /* Page heading */
+  h2.fs-4 { font-size: 1.1rem !important; }
+
+  /* Log card: tighter header */
+  .log-card-header { padding: 0.65rem 0.85rem; gap: 0.4rem; }
+  .sport-pill      { font-size: 0.68rem; padding: 0.18rem 0.55rem; }
+  .log-count       { font-size: 0.7rem; }
+
+  /* Table: tighter cells, hide less-important columns */
+  .log-table thead th  { padding: 0.55rem 0.65rem; font-size: 0.6rem; }
+  .log-table td        { padding: 0.6rem 0.65rem; }
+  .log-date            { font-size: 0.78rem; }
+  .log-num             { font-size: 0.8rem; }
+  .col-hide-mobile     { display: none !important; }
+
+  /* Activity detail panel: stack stats above map */
+  .activity-detail-panel { grid-template-columns: 1fr; }
+
+  .activity-detail-stats {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .activity-detail-map { height: 200px; }
+
+  /* Strength detail */
+  .strength-detail-panel { padding: 0.85rem 0.85rem 1rem; }
+  .exercise-block        { padding: 0.55rem 0.7rem; }
+
+  /* Summary pages */
+  .stat-number { font-size: 1.6rem; }
+  #map         { height: 340px; }
+}
+

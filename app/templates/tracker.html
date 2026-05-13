@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block title %}{{ day.workout_name }} — Mellow Health{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="/static/css/tracker.css?v=1">
+{% endblock %}
+
+{% block content %}
+
+<!-- Sticky tracker header -->
+<div class="tracker-header">
+  <a href="/strength/plans/{{ plan_id }}" class="btn btn-sm btn-outline-secondary">
+    <i class="bi bi-arrow-left"></i>
+  </a>
+  <div class="tracker-title">
+    <span class="fw-semibold">{{ day.workout_name }}</span>
+    {% if day.day_label %}
+    <span class="text-muted ms-2" style="font-size:0.8rem">{{ day.day_label }}</span>
+    {% endif %}
+  </div>
+  <div class="tracker-timer-group">
+    <span id="timer-display" class="tracker-timer">00:00</span>
+    <button id="timer-toggle" class="btn btn-sm btn-outline-secondary"
+            onclick="TrackerTimer.toggle()" title="Pause / Resume">
+      <i class="bi bi-pause-fill" id="timer-icon"></i>
+    </button>
+  </div>
+</div>
+
+<!-- Exercise cards -->
+<div class="tracker-exercises" id="tracker-exercises">
+  {% for ex in exercises %}
+  {% set ex_idx = loop.index0 %}
+  <div class="exercise-card" data-ex-idx="{{ ex_idx }}">
+    <div class="exercise-card-header">
+      <span class="ex-name">{{ ex.name }}</span>
+      {% set mg = ex.muscle_group if ex.muscle_group else "" %}
+      {% if mg %}
+      <span class="badge muscle-badge muscle-{{ mg | lower | replace(' ', '-') }}">{{ mg }}</span>
+      {% endif %}
+      <button class="btn btn-sm set-delete-btn ms-auto"
+              onclick="TrackerExercises.deleteCard(this)" title="Remove exercise">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+
+    <div class="set-rows" id="set-rows-{{ ex_idx }}">
+      {% for s in ex.sets %}
+      {% set s_idx = loop.index0 %}
+      <div class="set-row" data-set-idx="{{ s_idx }}">
+        <span class="set-number">{{ s_idx + 1 }}</span>
+        <div class="set-inputs">
+          <input type="number" class="form-control set-weight"
+                 value="{{ s.weight_kg if s.weight_kg is not none else '' }}"
+                 placeholder="BW" step="0.5" min="0">
+          <span class="set-sep">kg ×</span>
+          <input type="number" class="form-control set-reps"
+                 value="{{ s.reps }}" min="1" step="1">
+          <span class="set-sep-small">reps</span>
+        </div>
+        <div class="set-actions">
+          <button class="btn btn-sm set-complete-btn"
+                  onclick="TrackerSets.toggleComplete(this)" title="Mark complete">
+            <i class="bi bi-check-lg"></i>
+          </button>
+          <button class="btn btn-sm set-delete-btn"
+                  onclick="TrackerSets.deleteSet(this)" title="Delete set">
+            <i class="bi bi-trash3"></i>
+          </button>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <button class="btn btn-sm add-set-btn" onclick="TrackerSets.addSet({{ ex_idx }})">
+      <i class="bi bi-plus"></i> Add Set
+    </button>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Add Exercise button (above sticky footer) -->
+<div style="padding: 0 1rem 5.5rem;">
+  <button class="btn btn-outline-secondary w-100" onclick="TrackerExercises.openPicker()">
+    <i class="bi bi-plus-circle me-2"></i>Add Exercise
+  </button>
+</div>
+
+<!-- Sticky footer -->
+<div class="tracker-footer">
+  <button class="btn btn-primary w-100 btn-lg" id="finish-btn"
+          onclick="TrackerSubmit.finish()">
+    <i class="bi bi-flag-fill me-2"></i>Finish Workout
+  </button>
+</div>
+
+<!-- Exercise picker modal -->
+<div class="modal fade" id="exercisePickerModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content" style="background:#1c1c1e;border-color:rgba(255,255,255,0.1)">
+      <div class="modal-header" style="border-color:rgba(255,255,255,0.1)">
+        <h5 class="modal-title">Add Exercise</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-2">
+        <input type="text" id="exercise-search" class="form-control mb-2"
+               placeholder="Search exercises…"
+               style="background:#2c2c2e;border-color:rgba(255,255,255,0.12);color:#fff">
+        <div id="exercise-picker-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Data for JS -->
+<script>
+  const PLAN_WORKOUT_ID = {{ day.id }};
+  const PLAN_ID         = {{ plan_id }};
+</script>
+{% endblock %}
+
+{% block extra_js %}
+<script src="/static/js/tracker.js?v=3"></script>
+{% endblock %}

@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+
+{% block title %}{{ plan.plan_name }} — Mellow Health{% endblock %}
+
+{% block content %}
+<div class="mb-3">
+  <a href="/strength/plans" class="text-decoration-none text-muted small">
+    <i class="bi bi-arrow-left me-1"></i>Back to Plans
+  </a>
+</div>
+
+<div class="d-flex align-items-center gap-3 mb-4 flex-wrap">
+  <h2 class="fs-4 fw-semibold mb-0">{{ plan.plan_name }}</h2>
+  <span class="badge bg-secondary">{{ days | length }} workouts</span>
+  {% set done_count = completed_day_ids | length %}
+  {% if done_count > 0 %}
+  <span class="badge" style="background:rgba(48,209,88,0.18);color:#30D158">
+    {{ done_count }}/{{ days | length }} done
+  </span>
+  {% endif %}
+</div>
+
+<div class="row g-3">
+  {% for day in days %}
+  <div class="col-6 col-md-4 col-lg-3" id="day-col-{{ day.id }}">
+    <div class="card plan-day-card h-100 {% if day.id in completed_day_ids %}plan-day-done{% endif %}"
+         style="cursor:pointer"
+         onclick="PlanOverview.openPreview({{ day.id }}, {{ 'true' if day.id in completed_day_ids else 'false' }})"
+         data-day-id="{{ day.id }}"
+         data-day-label="{{ day.day_label | e }}"
+         data-workout-name="{{ day.workout_name | e }}"
+         data-muscle-group="{{ day.muscle_group | e if day.muscle_group else '' }}"
+         data-exercises="{{ exercises_by_day[day.id] | e }}">
+      <div class="card-body d-flex flex-column position-relative">
+        {% if day.id not in completed_day_ids %}
+        <button class="btn btn-sm position-absolute p-1 plan-day-delete-btn"
+                style="top:0.5rem;right:0.5rem;line-height:1;z-index:2;background:transparent;border:none"
+                onclick="event.stopPropagation(); PlanOverview.deleteDay({{ day.id }}, {{ plan.id }}, this)"
+                title="Delete day">
+          <i class="bi bi-trash3" style="font-size:0.85rem;color:rgba(255,255,255,0.25)"></i>
+        </button>
+        {% endif %}
+        <div class="plan-day-label">{{ day.day_label }}</div>
+        <div class="plan-day-name">{{ day.workout_name }}</div>
+        <div class="plan-day-meta mb-2">
+          {{ day.planned_json.exercises | length }} exercise{{ 's' if day.planned_json.exercises | length != 1 else '' }}
+          {% if day.muscle_group %}
+          · <span class="badge muscle-badge muscle-{{ day.muscle_group | lower | replace(' ', '-') }}">
+              {{ day.muscle_group }}
+            </span>
+          {% endif %}
+        </div>
+        <div class="mt-auto">
+          {% if day.id in completed_day_ids %}
+          <div class="plan-day-done-badge">
+            <i class="bi bi-check-circle-fill me-1"></i>Done
+          </div>
+          {% else %}
+          <div class="text-muted text-center" style="font-size:0.72rem;opacity:0.5">tap to preview</div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Day Preview Modal -->
+<div class="modal fade" id="dayPreviewModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content" style="background:#1c1c1e;border-color:rgba(255,255,255,0.1)">
+      <div class="modal-header" style="border-color:rgba(255,255,255,0.1)">
+        <div>
+          <h5 class="modal-title mb-0" id="preview-workout-name"></h5>
+          <small class="text-muted" id="preview-day-label"></small>
+        </div>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-0" id="preview-exercise-list"></div>
+      <div class="modal-footer" style="border-color:rgba(255,255,255,0.1)" id="preview-footer"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const PLAN_ID = {{ plan.id }};
+
+const PlanOverview = {
+  _modal: null,
+
+  openPreview(dayId, isDone) {
+    const card = document.querySelector(`[data-day-id="${dayId}"]`);
+    const dayLabel    = card.dataset.dayLabel;
+    const workoutName = card.dataset.workoutName;
+    let exercises = [];
+    try { exercises = JSON.parse(card.dataset.exercises); } catch {}
+
+    document.getElementById('preview-workout-name').textContent = workoutName;
+    document.getElementById('preview-day-label').textContent    = dayLabel;
+
+    const listEl = document.getElementById('preview-exercise-list');
+    if (exercises.length === 0) {
+      listEl.innerHTML = '<p class="text-muted p-3 mb-0">No exercises planned.</p>';
+    } else {
+      listEl.innerHTML = exercises.map(ex => {
+        const mg = ex.muscle_group || '';
+        const mgClass = mg.toLowerCase().replace(/\s+/g, '-');
+        const sets = ex.sets || [];
+        const badge = mg
+          ? `<span class="badge muscle-badge muscle-${mgClass}">${mg}</span>`
+          : '';
+        return `<div class="d-flex align-items-center justify-content-between px-3 py-2"
+                     style="border-bottom:1px solid rgba(255,255,255,0.07)">
+                  <div>
+                    <div class="fw-semibold" style="font-size:0.9rem">${ex.name}</div>
+                    <div class="text-muted" style="font-size:0.75rem">${sets.length} set${sets.length !== 1 ? 's' : ''}</div>
+                  </div>
+                  ${badge}
+                </div>`;
+      }).join('');
+    }
+
+    const footer = document.getElementById('preview-footer');
+    if (isDone) {
+      footer.innerHTML = '<span class="text-muted small"><i class="bi bi-check-circle-fill me-1 text-success"></i>Workout completed</span>';
+    } else {
+      footer.innerHTML = `<a href="/strength/plans/${PLAN_ID}/day/${dayId}" class="btn btn-primary w-100">
+        <i class="bi bi-play-fill me-2"></i>Start Workout
+      </a>`;
+    }
+
+    if (!this._modal) {
+      this._modal = new bootstrap.Modal(document.getElementById('dayPreviewModal'));
+    }
+    this._modal.show();
+  },
+
+  async deleteDay(dayId, planId, btnEl) {
+    if (!confirm('Remove this day from the plan?')) return;
+    try {
+      const resp = await fetch(`/strength/plans/${planId}/day/${dayId}`, { method: 'DELETE' });
+      if (!resp.ok) {
+        const err = await resp.json().catch(() => ({ detail: 'Server error' }));
+        alert(err.detail || 'Could not delete day');
+        return;
+      }
+      document.getElementById(`day-col-${dayId}`).remove();
+    } catch {
+      alert('Network error — could not delete day');
+    }
+  },
+};
+</script>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="/static/css/tracker.css?v=1">
+{% endblock %}

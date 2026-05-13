@@ -1,0 +1,363 @@
+{% extends "base.html" %}
+
+{% block title %}Strength Summary — Mellow Health{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Strength Summary</h2>
+
+{# ── Stat cards ── #}
+<div class="row g-3 mb-4">
+  <div class="col-6 col-md-3">
+    <div class="card stat-card text-center shadow-sm h-100">
+      <div class="card-body d-flex flex-column justify-content-center">
+        <div class="stat-number text-primary">{{ total_sessions }}</div>
+        <div class="stat-label">Total sessions</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3">
+    <div class="card stat-card text-center shadow-sm h-100">
+      <div class="card-body d-flex flex-column justify-content-center">
+        <div class="stat-number text-success">{{ "{:,}".format(total_volume_kg) }}</div>
+        <div class="stat-label">Total kg lifted</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3">
+    <div class="card stat-card text-center shadow-sm h-100">
+      <div class="card-body d-flex flex-column justify-content-center">
+        {% set pct = period.volume_change_pct %}
+        <div class="stat-number {% if pct > 0 %}text-success{% elif pct < 0 %}text-danger{% else %}text-secondary{% endif %}">
+          {% if pct > 0 %}+{% endif %}{{ pct }}%
+        </div>
+        <div class="stat-label">Volume vs prev period</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3">
+    <div class="card stat-card text-center shadow-sm h-100">
+      <div class="card-body d-flex flex-column justify-content-center">
+        {% if days_since_last is not none %}
+          <div class="stat-number {% if days_since_last <= 3 %}text-success{% elif days_since_last <= 7 %}text-warning{% else %}text-danger{% endif %}">
+            {{ days_since_last }}d
+          </div>
+        {% else %}
+          <div class="stat-number text-secondary">—</div>
+        {% endif %}
+        <div class="stat-label">Days since last session</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# ── 28-day period comparison ── #}
+<div class="card mb-4 shadow-sm">
+  <div class="card-header fw-semibold">Last 28 Days vs Previous 28 Days</div>
+  <div class="card-body">
+    <div class="row text-center align-items-center g-0">
+      <div class="col-5">
+        <div class="fs-4 fw-bold text-light">{{ period.current_sessions }}
+          <small class="fs-6 text-muted fw-normal">sessions</small>
+        </div>
+        <div class="text-muted">{{ "{:,}".format(period.current_volume) }} kg</div>
+        <div class="text-muted small mt-1">Last 28 days</div>
+      </div>
+      <div class="col-2 d-flex flex-column align-items-center justify-content-center py-2">
+        {% set v_chg = period.volume_change_pct %}
+        <div class="fs-2 {% if v_chg > 0 %}text-success{% elif v_chg < 0 %}text-danger{% else %}text-secondary{% endif %}">
+          {% if v_chg > 0 %}<i class="bi bi-arrow-up-circle-fill"></i>
+          {% elif v_chg < 0 %}<i class="bi bi-arrow-down-circle-fill"></i>
+          {% else %}<i class="bi bi-dash-circle-fill"></i>{% endif %}
+        </div>
+        <div class="fw-bold {% if v_chg > 0 %}text-success{% elif v_chg < 0 %}text-danger{% else %}text-secondary{% endif %}">
+          {% if v_chg > 0 %}+{% endif %}{{ v_chg }}%
+        </div>
+        <div class="text-muted" style="font-size:0.7rem">volume</div>
+        {% set s_chg = period.session_change_pct %}
+        <div class="mt-1 small {% if s_chg > 0 %}text-success{% elif s_chg < 0 %}text-danger{% else %}text-secondary{% endif %}">
+          {% if s_chg > 0 %}+{% endif %}{{ s_chg }}% sessions
+        </div>
+      </div>
+      <div class="col-5">
+        <div class="fs-4 fw-bold text-light">{{ period.prev_sessions }}
+          <small class="fs-6 text-muted fw-normal">sessions</small>
+        </div>
+        <div class="text-muted">{{ "{:,}".format(period.prev_volume) }} kg</div>
+        <div class="text-muted small mt-1">Prev 28 days</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# ── Muscle group status ── #}
+<div class="card mb-4 shadow-sm">
+  <div class="card-header fw-semibold d-flex align-items-center gap-2 flex-wrap">
+    Muscle Group Status
+    <span class="text-muted small fw-normal">(last 28 days vs previous 28 days)</span>
+  </div>
+  <div class="card-body pb-2">
+    <div class="row g-2" id="muscleCards"></div>
+    <div class="d-flex flex-wrap gap-3 mt-3 ps-1" style="font-size:0.8rem">
+      <span><span class="badge bg-success me-1" style="font-size:0.6rem">●</span>On Track</span>
+      <span><span class="badge bg-warning me-1" style="font-size:0.6rem">●</span>Needs Attention</span>
+      <span><span class="badge bg-danger me-1" style="font-size:0.6rem">●</span>Neglected</span>
+    </div>
+  </div>
+</div>
+
+{# ── Muscle group volume progress ── #}
+<div class="card mb-4 shadow-sm">
+  <div class="card-header d-flex align-items-center gap-2">
+    <span class="fw-semibold">Strength Progress</span>
+    <small class="text-muted fw-normal">— volume per session (kg) by muscle group</small>
+  </div>
+  <div class="card-body">
+    <canvas id="chartMuscleProgress" height="180"></canvas>
+  </div>
+</div>
+
+{# ── Exercise trends ── #}
+<div class="card mb-4 shadow-sm">
+  <div class="card-header fw-semibold">Exercise Trends
+    <small class="text-muted fw-normal ms-1">(first half vs second half of tracked sessions)</small>
+  </div>
+  <div class="card-body">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <h6 class="text-success mb-3">
+          <i class="bi bi-graph-up-arrow me-1"></i>Improving
+          <span class="badge bg-success ms-1 fw-normal" id="improvingCount"></span>
+        </h6>
+        <div id="trendImproving"></div>
+      </div>
+      <div class="col-md-6">
+        <h6 class="text-warning mb-3">
+          <i class="bi bi-graph-down-arrow me-1"></i>Declining / Plateau
+          <span class="badge bg-secondary ms-1 fw-normal" id="decliningCount"></span>
+        </h6>
+        <div id="trendDeclining"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# ── Weekly volume + sessions per week ── #}
+<div class="row g-3">
+  <div class="col-md-6">
+    <div class="card shadow-sm h-100">
+      <div class="card-header fw-semibold">Weekly Volume (kg)</div>
+      <div class="card-body">
+        <canvas id="chartWeeklyVolume" height="180"></canvas>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card shadow-sm h-100">
+      <div class="card-header fw-semibold">Sessions per Week</div>
+      <div class="card-body">
+        <canvas id="chartSessionsPerWeek" height="180"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script>
+Chart.defaults.color = 'rgba(255,255,255,0.5)';
+Chart.defaults.borderColor = 'rgba(255,255,255,0.08)';
+
+const DATA = {{ chart_data_json | safe }};
+
+const MUSCLE_COLORS = {
+  "Arms":       "#9b59b6",
+  "Chest":      "#e74c3c",
+  "Back":       "#3498db",
+  "Legs":       "#2ecc71",
+  "Shoulders":  "#e67e22",
+  "Core":       "#1abc9c",
+  "Full Body":  "#f39c12",
+  "Push":       "#e74c3c",
+  "Pull":       "#3498db",
+  "Other":      "#95a5a6",
+};
+function groupColor(g) { return MUSCLE_COLORS[g] || "#adb5bd"; }
+
+// ── Muscle group status cards ──
+(function () {
+  const container = document.getElementById('muscleCards');
+  DATA.muscle_analysis.forEach(mg => {
+    const statusClass = { on_track: 'success', needs_attention: 'warning', neglected: 'danger' }[mg.status] || 'secondary';
+    const statusLabel = { on_track: 'On Track', needs_attention: 'Needs Attention', neglected: 'Neglected' }[mg.status] || '';
+    const arrow = mg.freq_change_pct > 0 ? '↑' : mg.freq_change_pct < 0 ? '↓' : '→';
+    const arrowClass = mg.freq_change_pct > 0 ? 'text-success' : mg.freq_change_pct < 0 ? 'text-danger' : 'text-secondary';
+    const volFmt = v => v >= 1000 ? (v / 1000).toFixed(1) + 't' : v + ' kg';
+    const color = groupColor(mg.group);
+    const col = document.createElement('div');
+    col.className = 'col-6 col-sm-4 col-md-3';
+    col.innerHTML = `
+      <div class="card h-100" style="background:rgba(255,255,255,0.04);border:none;border-left:3px solid ${color};">
+        <div class="card-body p-3">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <span class="fw-semibold small" style="color:${color}">${mg.group}</span>
+            <span class="badge bg-${statusClass}" style="font-size:0.6rem">${statusLabel}</span>
+          </div>
+          <div class="small text-light">
+            <span class="text-muted">Last 28d:</span> <strong>${mg.recent_sessions}</strong> sessions
+          </div>
+          <div class="small text-muted">Prev: ${mg.prev_sessions} sessions</div>
+          ${mg.recent_volume > 0 ? `<div class="small text-muted">${volFmt(mg.recent_volume)} volume</div>` : ''}
+          <div class="small ${arrowClass} mt-1">${arrow} ${Math.abs(mg.freq_change_pct)}%</div>
+        </div>
+      </div>`;
+    container.appendChild(col);
+  });
+})();
+
+// ── Muscle group volume progress (multi-line) ──
+(function () {
+  const mgData = DATA.muscle_group_volume;
+  const groups = Object.keys(mgData);
+  if (!groups.length) return;
+
+  const allDates = [...new Set(
+    Object.values(mgData).flatMap(sessions => sessions.map(s => s.date))
+  )].sort();
+
+  const datasets = groups.map(group => {
+    const dateMap = Object.fromEntries(mgData[group].map(s => [s.date, s.vol]));
+    const color = groupColor(group);
+    return {
+      label: group,
+      data: allDates.map(d => dateMap[d] ?? null),
+      borderColor: color,
+      backgroundColor: color + '15',
+      tension: 0.3,
+      pointRadius: 3,
+      pointHoverRadius: 6,
+      spanGaps: true,
+      fill: false,
+    };
+  });
+
+  new Chart(document.getElementById('chartMuscleProgress'), {
+    type: 'line',
+    data: { labels: allDates, datasets },
+    options: {
+      responsive: true,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { position: 'bottom', labels: { font: { size: 11 }, boxWidth: 12, padding: 14 } },
+        tooltip: {
+          callbacks: {
+            label: item => item.raw != null ? ` ${item.dataset.label}: ${item.raw.toLocaleString()} kg` : null,
+          }
+        }
+      },
+      scales: {
+        y: { ticks: { callback: v => v.toLocaleString() + ' kg' } },
+        x: { ticks: { maxTicksLimit: 14 }, grid: { display: false } }
+      }
+    }
+  });
+})();
+
+// ── Exercise trends ──
+(function () {
+  const trends = DATA.exercise_trends;
+  const improving = trends.filter(t => t.trend === 'improving');
+  const other = trends.filter(t => t.trend !== 'improving');
+
+  document.getElementById('improvingCount').textContent = improving.length;
+  document.getElementById('decliningCount').textContent = other.length;
+
+  function renderList(containerId, items, worstFirst) {
+    const el = document.getElementById(containerId);
+    if (!items.length) {
+      el.innerHTML = '<p class="text-muted small mb-0">Not enough data yet (need ≥ 3 sessions per exercise).</p>';
+      return;
+    }
+    const sorted = [...items].sort((a, b) => worstFirst ? a.change_pct - b.change_pct : b.change_pct - a.change_pct);
+    el.innerHTML = sorted.slice(0, 8).map(t => {
+      const isUp = t.change_pct > 0;
+      const isDown = t.change_pct < 0;
+      const colorClass = isUp ? 'text-success' : isDown ? 'text-danger' : 'text-secondary';
+      const arrow = isUp ? '↑' : isDown ? '↓' : '→';
+      const mgColor = groupColor(t.muscle_group);
+      return `
+        <div class="d-flex align-items-center justify-content-between py-2 border-bottom border-secondary border-opacity-25">
+          <div class="me-2 flex-grow-1" style="min-width:0">
+            <div class="small fw-semibold text-truncate">${t.name}</div>
+            <div class="d-flex gap-2 align-items-center mt-1">
+              <span class="badge rounded-pill" style="background:${mgColor}20;color:${mgColor};font-size:0.65rem;border:1px solid ${mgColor}60">${t.muscle_group}</span>
+              <span class="text-muted" style="font-size:0.72rem">${t.sessions} sessions</span>
+            </div>
+          </div>
+          <div class="text-end flex-shrink-0">
+            <div class="fw-bold ${colorClass}">${isUp ? '+' : ''}${t.change_pct}% ${arrow}</div>
+            <div class="text-muted" style="font-size:0.72rem">1RM: ${t.current_1rm.toFixed(1)} kg</div>
+          </div>
+        </div>`;
+    }).join('');
+  }
+
+  renderList('trendImproving', improving, false);
+  renderList('trendDeclining', other, true);
+})();
+
+// ── Weekly volume ──
+(function () {
+  const labels = DATA.volume_over_time.map(r => r.week);
+  const volumes = DATA.volume_over_time.map(r => r.volume_kg);
+  new Chart(document.getElementById('chartWeeklyVolume'), {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [{
+        data: volumes,
+        borderColor: '#0d6efd',
+        backgroundColor: 'rgba(13,110,253,0.08)',
+        fill: true,
+        tension: 0.3,
+        pointRadius: 3,
+        pointBackgroundColor: '#0d6efd',
+      }]
+    },
+    options: {
+      plugins: { legend: { display: false } },
+      scales: {
+        y: { ticks: { callback: v => v.toLocaleString() + ' kg' } },
+        x: { ticks: { maxTicksLimit: 12 }, grid: { display: false } }
+      }
+    }
+  });
+})();
+
+// ── Sessions per week ──
+(function () {
+  const labels = DATA.sessions_over_time.map(r => r.week);
+  const sessions = DATA.sessions_over_time.map(r => r.sessions);
+  new Chart(document.getElementById('chartSessionsPerWeek'), {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [{
+        data: sessions,
+        backgroundColor: 'rgba(46,204,113,0.65)',
+        borderColor: '#2ecc71',
+        borderWidth: 1,
+        borderRadius: 3,
+      }]
+    },
+    options: {
+      plugins: { legend: { display: false } },
+      scales: {
+        y: { ticks: { stepSize: 1 }, title: { display: false } },
+        x: { ticks: { maxTicksLimit: 12 }, grid: { display: false } }
+      }
+    }
+  });
+})();
+</script>
+{% endblock %}

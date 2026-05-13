@@ -5,3 +5,4 @@ sqlalchemy==2.0.35
 gpxpy==1.6.2
 python-fitparse==2.1.6
 aiofiles==23.2.1
+pdfplumber==0.11.4

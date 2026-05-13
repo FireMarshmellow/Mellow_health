@@ -1,0 +1,186 @@
+{% extends "base.html" %}
+
+{% block title %}Strength Log — Mellow Health{% endblock %}
+
+{# ── Macros ── #}
+{% macro fmt_dur(secs) %}
+  {%- if secs -%}
+    {%- set m = (secs // 60) | int -%}
+    {%- set s = (secs % 60) | int -%}
+    {{ m }}m {{ "%02d"|format(s) }}s
+  {%- else -%}—{%- endif -%}
+{% endmacro %}
+
+{# ── Main content ── #}
+{% block content %}
+<h2 class="mb-3 fs-4 fw-semibold">Strength Log</h2>
+
+<div class="log-card">
+  <div class="log-card-header">
+    <span style="font-size:0.75rem;color:rgba(255,255,255,0.35)">Click any column header to sort</span>
+    <span class="log-count">{{ workouts | length }} sessions</span>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table log-table strength-log-table mb-0">
+      <thead>
+        <tr>
+          <th class="sortable-th sort-active" data-col="date" data-dir="desc">
+            <span class="sort-link">Date <i class="bi bi-arrow-down sort-icon"></i></span>
+          </th>
+          <th class="sortable-th text-end col-hide-mobile" data-col="duration" data-dir="none">
+            <span class="sort-link justify-content-end">Duration <i class="bi bi-arrow-down-up sort-idle sort-icon"></i></span>
+          </th>
+          <th class="sortable-th text-end" data-col="volume" data-dir="none">
+            <span class="sort-link justify-content-end">Volume kg <i class="bi bi-arrow-down-up sort-idle sort-icon"></i></span>
+          </th>
+          <th class="sortable-th text-end" data-col="exercises" data-dir="none">
+            <span class="sort-link justify-content-end">Exercises <i class="bi bi-arrow-down-up sort-idle sort-icon"></i></span>
+          </th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="strength-tbody">
+        {% for w in workouts %}
+
+        {# ── Summary row ── #}
+        <tr class="activity-row strength-row"
+            data-workout-id="{{ w.id }}"
+            data-date="{{ w.workout_date.strftime('%Y%m%d') if w.workout_date else '0' }}"
+            data-duration="{{ w.duration_seconds or 0 }}"
+            data-volume="{{ (w.total_volume_kg | int) if w.total_volume_kg else 0 }}"
+            data-exercises="{{ w.exercises | length }}">
+          <td class="log-date text-nowrap">
+            {{ w.workout_date.strftime('%d %b %Y') if w.workout_date else '—' }}
+          </td>
+          <td class="text-end log-num text-nowrap col-hide-mobile">{{ fmt_dur(w.duration_seconds) }}</td>
+          <td class="text-end log-num fw-semibold">
+            {{ "{:,}".format(w.total_volume_kg | int) if w.total_volume_kg else '—' }}
+          </td>
+          <td class="text-end log-num pe-2">{{ w.exercises | length }}</td>
+          <td class="text-center" style="width:48px;min-width:48px">
+            <span class="activity-chevron">›</span>
+          </td>
+        </tr>
+
+        {# ── Detail row ── #}
+        <tr class="strength-detail-row" id="strength-detail-{{ w.id }}" style="display:none">
+          <td colspan="5" class="p-0">
+            <div class="strength-detail-panel">
+
+              <div class="strength-meta mb-3">
+                <span class="fw-semibold">{{ w.workout_name }}</span>
+                {% if w.workout_time %}
+                  <span class="ms-2" style="color:rgba(255,255,255,0.4);font-size:0.83rem">
+                    {{ w.workout_date.strftime('%d %b %Y') }}, {{ w.workout_time.strftime('%H:%M') }}
+                  </span>
+                {% else %}
+                  <span class="ms-2" style="color:rgba(255,255,255,0.4);font-size:0.83rem">
+                    {{ w.workout_date.strftime('%d %b %Y') }}
+                  </span>
+                {% endif %}
+                {% if w.duration_seconds %}
+                  <span class="ms-2" style="color:rgba(255,255,255,0.4);font-size:0.83rem">
+                    · {{ fmt_dur(w.duration_seconds) }}
+                  </span>
+                {% endif %}
+              </div>
+
+              {% for ex in w.exercises %}
+              <div class="exercise-block mb-3">
+                <div class="exercise-header mb-1">
+                  <div class="ex-title-row">
+                    <span class="ex-name">{{ ex.exercise_name }}</span>
+                    {% if ex.muscle_group %}
+                      <span class="badge muscle-badge muscle-{{ ex.muscle_group | lower | replace(' ', '-') }}">{{ ex.muscle_group }}</span>
+                    {% endif %}
+                  </div>
+                  {% if ex.total_volume_kg %}
+                    <div class="ex-volume">{{ "{:,}".format(ex.total_volume_kg | int) }} kg total</div>
+                  {% endif %}
+                </div>
+                <div class="sets-grid">
+                  {% for s in ex.sets %}
+                  <div class="set-chip">
+                    <span class="set-num">{{ s.set_number }}</span>
+                    <span class="set-weight">
+                      {%- if s.weight_kg -%}{{ s.weight_kg | round(1) }} kg{%- else -%}BW{%- endif -%}
+                    </span>
+                    <span class="set-sep">×</span>
+                    <span class="set-reps">{{ s.reps }}</span>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+              {% endfor %}
+
+            </div>
+          </td>
+        </tr>
+
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// ── Expand / collapse ──────────────────────────────────────
+document.querySelectorAll(".strength-row").forEach(row => {
+  row.addEventListener("click", function() {
+    const id = this.dataset.workoutId;
+    const detail = document.getElementById("strength-detail-" + id);
+    const isOpen = detail.style.display !== "none";
+    detail.style.display = isOpen ? "none" : "table-row";
+    this.classList.toggle("expanded", !isOpen);
+  });
+});
+
+// ── Client-side sort ───────────────────────────────────────
+(function() {
+  const tbody = document.getElementById("strength-tbody");
+  let sortCol = "date";
+  let sortDir = "desc";
+
+  document.querySelectorAll(".sortable-th").forEach(th => {
+    th.addEventListener("click", function() {
+      const col = this.dataset.col;
+      sortDir = (sortCol === col && sortDir === "desc") ? "asc" : "desc";
+      sortCol = col;
+      render();
+      updateHeaders();
+    });
+  });
+
+  function render() {
+    const rows = Array.from(document.querySelectorAll(".strength-row"));
+    const pairs = rows.map(r => ({
+      row: r,
+      detail: document.getElementById("strength-detail-" + r.dataset.workoutId),
+      val: parseFloat(r.dataset[sortCol]) || 0
+    }));
+    pairs.sort((a, b) => sortDir === "asc" ? a.val - b.val : b.val - a.val);
+    pairs.forEach(({ row, detail }) => {
+      tbody.appendChild(row);
+      if (detail) tbody.appendChild(detail);
+    });
+  }
+
+  function updateHeaders() {
+    document.querySelectorAll(".sortable-th").forEach(th => {
+      const col = th.dataset.col;
+      const icon = th.querySelector(".sort-icon");
+      if (col === sortCol) {
+        th.classList.add("sort-active");
+        icon.className = "bi sort-icon " + (sortDir === "asc" ? "bi-arrow-up" : "bi-arrow-down");
+      } else {
+        th.classList.remove("sort-active");
+        icon.className = "bi bi-arrow-down-up sort-idle sort-icon";
+      }
+    });
+  }
+})();
+</script>
+{% endblock %}
